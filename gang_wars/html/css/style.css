@@ -1,0 +1,1090 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background: transparent;
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+
+#wrap {
+    blending-mode:lighten;
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width:100%;
+	height:100%;
+	color: rgba(255, 255, 255, 1);
+	top: 50%;
+	left:50%;
+    transform: translate(-50%, -50%);
+	overflow:hidden;
+	display:flex;
+}
+
+
+.familiesgangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(0,255,0,0.5) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.bloodsgangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(255,0,0,0.8) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.ballasgangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(120,0,255,1) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.vagosgangwars-bg, .vaggos-bg{
+	background:  radial-gradient(circle at 50% 150%, rgba(255,210,0,0.8) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.westsiderappersgangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(29, 39, 83, 0.8) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.cripsgangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(18, 25, 112,0.8) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.marabuntagangwars-bg {
+	background:  radial-gradient(circle at 50% 150%, rgba(0,120,255,0.8) 0%, transparent 60%), url('../images/background.png') center center no-repeat;
+	background-size: cover;
+}
+
+.familiesgangwars-bg #side-img {
+	background:url('../images/hoods/familiesgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.bloodsgangwars-bg #side-img {
+	background:url('../images/hoods/bloodsgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.ballasgangwars-bg #side-img {
+	background:url('../images/hoods/ballasgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.vagosgangwars-bg #side-img, .vaggos-bg #side-img {
+	background:url('../images/hoods/vagosgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.westsiderappersgangwars-bg #side-img {
+	background:url('../images/hoods/westsiderappersgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.cripsgangwars-bg #side-img {
+	background:url('../images/hoods/cripsgangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.marabuntagangwars-bg #side-img {
+	background:url('../images/hoods/marabuntagangwars.png') center center no-repeat;
+	background-size:cover;
+}
+
+.familiesgangwars-name {
+	color:rgba(50,255,50,1);
+	text-shadow: 0 0 1.5vw rgba(0,255,0,1);
+}
+
+.bloodsgangwars-name {
+	color:rgba(255,60,60,1);
+	text-shadow: 0 0 1.5vw rgba(255,0,0,1);
+}
+
+.vagosgangwars-name, .vaggos-name {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1.5vw rgba(255,190,0,1);
+}
+
+.westsiderappersgangwars-name {
+	color:rgba(29, 39, 83,1);
+	text-shadow: 0 0 1.5vw rgba(29, 39, 83,1);
+}
+
+.cripsgangwars-name {
+	color:rgba(18, 25, 112,1);
+	text-shadow: 0 0 1.5vw rgba(255,190,0,1);
+}
+
+.ballasgangwars-name {
+	color:rgba(150,100,255,1);
+	text-shadow: 0 0 1.5vw rgba(120,0,255,1);
+}
+
+.marabuntagangwars-name {
+	color:rgba(50,200,255,1);
+	text-shadow: 0 0 1.5vw rgba(0,150,255,1);
+}
+
+
+#side-menu {
+	background:rgba(255,255,255,0.05);
+	position:relative;
+	width:20vw;
+	padding:1vw 1vw 1vw 0.5vw;
+	height:32vw;
+	top:50%;
+	left:14%;
+	transform:translate(0,-50%);
+	font-size:0.9vw;
+	line-height:1vw;
+	font-weight:300;
+	text-align:center;
+	/* float:left; */
+	border-right:0.05vw solid rgba(255,255,255,0.1);
+	border-top:0.05vw solid rgba(255,255,255,0.1);
+	border-bottom:0.05vw solid rgba(255,255,255,0.1);
+}
+
+
+#side-border {
+	position:absolute;
+	float:left;
+	height:90%;
+	width:0.02vw;
+	background:rgba(255,255,255,0.1);
+}
+
+#side-img {
+	width:95%;
+	height:10vw;
+	margin-left:5%;
+	background:rgba(0,0,0,0.1);
+	border:0.05vw solid rgba(255,255,255,0.2);
+	image-rendering:pixelated;
+}
+
+
+
+#strain-content {
+	background:rgba(255,255,255,0.05);
+	position:relative;
+	width:48vw;
+	height:32vw;
+	top:50%;
+	left:14%;
+	padding:1.5vw 0.5vw 0.5vw 1vw;
+	font-size:1.2vw;
+	text-align:left;
+	transform:translate(0,-50%);
+	z-index:2;
+	border-top:0.05vw solid rgba(255,255,255,0.1);
+	border-left:0.05vw solid rgba(255,255,255,0.1);
+	border-bottom:0.05vw solid rgba(255,255,255,0.1);
+}
+
+#strain-scrollable {
+	width:100%;
+	height:21.4vw;
+	overflow-y:scroll;
+}
+
+
+/* == LEFT SIDE == */
+
+#gang-war-info-block {
+	width:95%;
+	background:rgba(255,255,255,0.05);
+	border:0.05vw solid rgba(255,255,255,0.1);
+	font-size:0.9vw;
+	font-weight:300;
+	text-align:left;
+	margin:0.5vw 0;
+	margin-left:5%;
+	padding:0.5vw 1vw;
+}
+
+#gang-war-info-block table {
+	width:100%;
+}
+
+#gang-war-info-block table td.icon {
+	width:20%;
+}
+
+#gang-war-info-block .icon {
+	width:2vw;
+}
+
+
+#hood-owner {
+	font-size:1.2vw;
+	line-height:1.3vw;
+	font-weight:400;
+	letter-spacing:0.01vw;
+}
+
+#controlled-by-name {
+	color:rgba(255,70,70,1);
+	text-shadow: 0 0 1vw rgba(255,0,0,1);
+	font-size:1.2vw;
+	line-height:1.3vw;
+	font-weight:400;
+	letter-spacing:0.01vw;
+}
+
+#cashout-money {
+	color:rgba(150,255,50,1);
+	text-shadow: 0 0 1vw rgba(100,255,50,1);
+	font-size:1.2vw;
+	line-height:1.3vw;
+	font-weight:400;
+	letter-spacing:0.01vw;
+	margin-left:0.5vw;
+}
+
+
+#btn-cashout {
+	width:10vw;
+	height:2vw;
+	background:rgba(130,200,50,1);
+	border:none;
+	border-radius:2vw;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	float:left;
+	margin-top:0.5vw;
+	
+}
+
+#btn-cashout:hover {
+	background:rgba(170,235,50,1);
+	box-shadow: 0 0 1vw rgba(120,235,50,0.7);
+	transform:scale(1.05);
+}
+
+#btn-weapons {
+	width:10vw;
+	height:2vw;
+	background:rgba(210,50,50,1);
+	border:none;
+	border-radius:2vw;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	float:left;
+	margin-top:0.5vw;
+	
+}
+
+#btn-weapons:hover {
+	background:rgba(235,60,50,1);
+	box-shadow: 0 0 1vw rgba(255,50,50,0.7);
+	transform:scale(1.05);
+}
+
+#btn-respawn {
+	width:7vw;
+	height:2vw;
+	background:rgba(235,180,30,1);
+	border:none;
+	border-radius:2vw;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	float:right;
+	margin-top:-0.5vw;
+	
+}
+
+#btn-respawn:hover {
+	background:rgba(255,210,50,1);
+	box-shadow: 0 0 1vw rgba(255,160,50,0.7);
+	transform:scale(1.05);
+}
+
+/* == RIGHT SIDE == */
+
+#gang-name {
+	position:absolute;
+	font-family:SignPainter;
+	width:100%;
+	top:-3.1vw;
+	left:50%;
+	transform:translate(-50%, 0%);
+	font-size:4vw;
+	color:rgba(255, 255, 255,1);
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.4);
+	text-align:center;
+	z-index:4;
+}
+
+#next-gang-war {
+	width:100%;
+	text-align:left;
+	font-size:1.2vw;
+	font-weight:300;
+	color:#fff;
+	margin-top:1vw;
+}
+
+#next-gang-war span {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,200,50,1);
+}
+
+#list-attackers {
+	width:49%;
+	height:90%;
+	margin-top:1vw;
+	float:left;
+	position:relative;
+}
+
+#list-attackers table {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	vertical-align:top!important;
+}
+
+#list-attackers table th {
+	font-size:0.8vw;
+	font-weight:400;
+	background:rgba(255,50,50,0.8);
+	padding:0.5vw 0.8vw;
+}
+
+#list-attackers table td {
+	font-size:0.8vw;
+	font-weight:400;
+	background:rgba(255,255,255,0.1);
+	padding:0.5vw 0.8vw;
+	text-align:left;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	color:#fff;
+}
+
+#list-attackers table th.name {
+	width:80%;
+}
+
+#list-attackers table th.no {
+	width:12%;
+}
+
+
+#btn-register-attacker {
+	width:15vw;
+	height:2.5vw;
+	background:rgba(215,40,40,1);
+	border:none;
+	border-radius:2vw;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	position:absolute;
+	bottom:1.5vw;
+	left:50%;
+	transform:translate(-50%,0%);
+	
+}
+
+#btn-register-attacker:hover {
+	background:#ed2424;
+	box-shadow: 0 0 2vw #bb1f1f;
+}
+#list-defenders {
+	width:49%;
+	height:90%;
+	margin-top:1vw;
+	float:left;
+	position:relative;
+}
+
+#list-defenders table {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	vertical-align:top!important;
+}
+
+#list-defenders table th {
+	font-size:0.8vw;
+	font-weight:400;
+	background:rgba(155,235,50,0.8);
+	padding:0.5vw 0.8vw;
+}
+
+#list-defenders table td {
+	font-size:0.8vw;
+	font-weight:400;
+	background:rgba(255,255,255,0.1);
+	padding:0.5vw 0.8vw;
+	text-align:left;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	color:#fff;
+}
+
+#list-defenders table th.name {
+	width:80%;
+}
+
+#list-defenders table th.no {
+	width:12%;
+}
+
+#btn-register-defender {
+	width:15vw;
+	height:2.5vw;
+	background:rgba(130,200,50,1);
+	border:none;
+	border-radius:2vw;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	position:absolute;
+	bottom:1.5vw;
+	left:50%;
+	transform:translate(-50%,0%);
+	
+}
+
+#btn-register-defender:hover {
+	background:rgba(170,235,50,1);
+	box-shadow: 0 0 2vw rgba(120,235,50,0.4);
+}
+
+
+/* == BUTTONS == */
+
+#btn-buy-premium {
+	background:#73c51a;
+	padding:10px;
+	width:200px;
+	border:1px solid #73c51a;
+	color:#fff;
+	font-size:16px;
+	letter-spacing:1px;
+	margin-top:10px;
+	margin-right:10px;
+	cursor:pointer;
+	transition:0.3s;
+	float:left;
+}
+
+#btn-buy-premium:hover {
+	background:#83d500;
+	border:1px solid #73c51a;
+	box-shadow: 0 0 25px #508300;
+}
+
+#btn-sell-premium {
+	background:#c41a1a;
+	padding:10px;
+	width:200px;
+	border:1px solid #c41a1a;
+	color:#fff;
+	font-size:16px;
+	letter-spacing:1px;
+	margin-top:10px;
+	margin-right:10px;
+	cursor:pointer;
+	transition:0.3s;
+	float:left;
+}
+
+#btn-sell-premium:hover {
+	background:#e12222;
+	border:1px solid #e12222;
+	box-shadow: 0 0 25px #b11e1e;
+}
+
+#btn-place-order {
+	background:#73c51a;
+	padding:10px 20px;
+	width:220px;
+	height:89px;
+	border:1px solid #73c51a;
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+	letter-spacing:1px;
+	margin-left:10px;
+	margin-top:1px;
+	cursor:pointer;
+	transition:0.3s;
+	float:left;
+}
+
+#btn-place-order:hover {
+	transform:scale(1.05);
+	background:#83d500;
+	border:1px solid #73c51a;
+	box-shadow: 0 0 40px #508300;
+}
+
+#btn-buy {
+	background:#3ea100;
+	padding:10px 20px;
+	width:490px;
+	height:74px;
+	border:1px solid #60df00;
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+	letter-spacing:1px;
+	text-shadow: 0 0 20px #2f7a00;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+#btn-buy:hover {
+	background:#83d500;
+	border:1px solid #6eff00;
+	color:#fff;
+	text-shadow: 0 0 20px #90ff4a;
+	box-shadow: 0 0 20px #508300;
+}
+
+#btn-sell {
+	background:#a10000;
+	padding:10px 20px;
+	width:490px;
+	height:74px;
+	border:1px solid #df0000;
+	color:#fff;
+	font-weight:bold;
+	font-size:20px;
+	letter-spacing:1px;
+	text-shadow: 0 0 20px #950000;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+#btn-sell:hover {
+	background:#d50000;
+	border:1px solid #ff1d1d;
+	color:#fff;
+	text-shadow: 0 0 20px #ff4a4a;
+	box-shadow: 0 0 20px #830000;
+}
+
+#description {
+	font-size:14px;
+	color:#ccc;
+}
+
+#reward-img {
+	width:50px;
+	margin-bottom:-16px;
+}
+
+#reward-text {
+	font-size:18px;
+	color:#fff;
+}
+
+#reward-amount {
+	font-size:18px;
+	font-weight:bold;
+	color:#ffd400;
+	text-shadow: 0 0 25px #f90;
+}
+
+/* -- BOTTOM LEFT WRAP -- */
+
+#bottom-left-wrap {
+	font-size:1.2vw;
+	color: #fff;
+	position:absolute;
+    vertical-align: top;
+    transition: 0.2s;
+    bottom:11vw;
+    left: 0;
+    position: absolute;
+	font-family:'Bebas Nue'!important;
+}
+
+#bottom-left-icon {
+	background:  url('../images/icon-tab.png') left center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:4vw;
+	height:2vw;
+	float:left;
+	opacity:1;
+	float:left;
+}
+
+#bottom-left-title {
+	font-size:1vw;
+	line-height:1vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	margin-bottom:0.5vw;
+	float:left;
+	font-family:'Bebas Nue'!important;
+}
+
+#bottom-left-title-small {
+	font-size:1vw;
+	line-height:2vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,0.7);
+	text-align:left;
+	margin-bottom:0.5vw;
+	float:left;
+}
+
+#bottom-left-title #highlight{
+	color:rgba(255,70,70,1);
+	text-shadow: 0 0 1vw rgba(255,0,0,1);
+}
+
+
+
+/* -- EVENT NOTIFICATION -- */
+
+#event-wrap {
+	font-family:Bebas Nue;
+	font-size:1.2vw;
+	color: rgba(255,255,255,1);
+	top:0;
+	left:50%;
+	width:22vw;
+	position:absolute;
+	transform:translate(-50%,0);
+}
+
+#event-ribbon {
+	background:  url('../images/ribbon.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 1vw rgba(255,210,55,0.5));
+}
+
+.ballasgangwars #event-ribbon {
+	background:  url('../images/ribbon-ballasgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(100,30,200,1));
+	animation:fadeInDown 1s 1;
+	
+}
+
+.familiesgangwars #event-ribbon {
+	background:  url('../images/ribbon-familiesgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(0,200,0,0.5));
+	animation:fadeInDown 1s 1;
+}
+
+.bloodsgangwars #event-ribbon {
+	background:  url('../images/ribbon-bloodsgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(255,0,0,0.5));
+	animation:fadeInDown 1s 1;
+}
+
+.vagosgangwars #event-ribbon, .vaggos #event-ribbon {
+	background:  url('../images/ribbon-vagosgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(255,180,0,0.5));
+	animation:fadeInDown 1s 1;
+}
+
+.westsiderappersgangwars #event-ribbon {
+	background:  url('../images/ribbon-westsiderappersgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(29, 39, 83,0.5));
+	animation:fadeInDown 1s 1;
+}
+
+.cripsgangwars #event-ribbon {
+	background:  url('../images/ribbon-cripsgangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(18, 25, 112,0.5));
+	animation:fadeInDown 1s 1;
+}
+
+.marabuntagangwars #event-ribbon {
+	background:  url('../images/ribbon-marabuntagangwars.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 2vw rgba(0,90,255,0.6));
+	animation:fadeInDown 1s 1;
+}
+
+.ballasgangwars #event-title {
+	color:rgba(155,100,255,1);
+	text-shadow: 0 0 1vw rgba(95,0,255,1);
+	animation:fadeInDown 1s 1;
+}
+
+.familiesgangwars #event-title {
+	color:rgba(85,255,85,1);
+	text-shadow: 0 0 1vw rgba(0,255,0,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+.bloodsgangwars #event-title {
+	color:rgba(255,55,55,1);
+	text-shadow: 0 0 1vw rgba(255,0,0,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+.vagosgangwars #event-title .vaggos #event-title {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,140,0,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+.westsiderappersgangwars #event-title {
+	color:rgba(29, 39, 83,1);
+	text-shadow: 0 0 1vw rgba(255,140,0,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+.cripsgangwars #event-title {
+	color:rgb(18, 25, 112);
+	text-shadow: 0 0 1vw rgba(18, 25, 112,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+.marabuntagangwars #event-title {
+	color:rgba(50,180,255,1);
+	text-shadow: 0 0 1vw rgba(0,100,255,0.6);
+	animation:fadeInDown 1s 1;
+}
+
+
+#event-icon {
+	font-size:2.7vw;
+	color:rgba(45,45,45,1);
+}
+
+#event-content {
+	width:15vw;
+	float:left;
+	opacity:2;
+	text-align:left;
+	position:relative;
+}
+
+
+#event-text {
+	font-size:1vw;
+	line-height:1vw;
+	color:rgba(255,255,255,0.6);
+	letter-spacing:0.1vw;
+	margin:1vw auto 0.5vw auto;
+}
+
+#event-title {
+	font-size:2vw;
+	line-height:2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+	margin:0.8vw auto 0.5vw auto;
+}
+
+#event-description {
+	font-size:1vw;
+	line-height:1.4vw;
+	color:rgba(255,255,255,0.8);
+	letter-spacing:0.1vw;
+}
+
+
+/* ==== GANG WAR RANKING ==== */
+
+#wrap-gang-ranking {
+	font-family:Bebas Nue;
+}
+
+#ranking-title {
+	position:absolute;
+	font-family:SignPainter;
+	width:100%;
+	top:20%;
+	left:50%;
+	transform:translate(-50%, 0%);
+	font-size:2.5vw;
+	color:rgba(255, 255, 255,1);
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.4);
+	text-align:center;
+	z-index:4;
+}
+
+#ranking-title span {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(210,150,0,1);
+}
+
+#killsandbounty {
+	position:absolute;
+	left:50%;
+	top:27%;
+	transform:translate(-50%,-50%);
+	font-size:1.2vw;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+}
+
+#killsandbounty span{
+	color:rgba(160,255,50,1);
+	text-shadow: 0 0 1vw rgba(120,255,50,1);
+	font-weight:400;
+}
+
+#score-scrollable {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:20vw;
+	height:20vw;
+	overflow-y: scroll;
+	position:absolute
+}
+
+.rwd-table {
+	background: rgba(15,15,15,0.6);
+	width: 100%;
+	overflow-y: scroll;
+	padding:0.4vw;
+}
+
+.rwd-table th, .rwd-table td {
+	padding: 0.5vw;
+	border: 0.05vw solid rgba(255,255,255,0.1);
+	color: rgba(255,255,255,1);
+	font-size:0.9vw;
+	font-weight:300;
+	text-align:center;
+}
+
+
+.rwd-table th.name {
+  text-align: left;
+}
+
+.rwd-table th.first {
+	color:rgba(255,220,50,1);
+}
+
+.rwd-table th.third {
+	color:#dc8d67;
+}
+
+.rwd-table tr.first {
+  background: url('../images/first.png') 0.3vw 0.5vw no-repeat, rgba(120, 100, 0, 0.8);
+}
+
+.rwd-table tr.second {
+  background: url('../images/second.png') 0.3vw 0.5vw no-repeat, rgba(120, 120, 120, 0.8);
+}
+
+.rwd-table tr.third {
+  background: url('../images/third.png') 0.3vw 0.5vw no-repeat, rgba(120, 40, 0, 0.8);
+}
+
+
+.scoreboard {
+  background:radial-gradient(circle at -10% 50%, rgba(160,0,0,1) 0%, rgba(0,0,0,0) 60%);
+  width:35vw;
+  height:100%;
+  padding:0.5vw;
+  top:50%;
+  left:0;
+  position:absolute;
+  transform:translate(0%,-50%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+	::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background: rgba(255,255,255,0);
+		border: none;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 0.2vw;
+		height: 0.4vw;
+		background-color: transparent;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background: rgba(255,200,40,1);
+		border: 0.1vw solid rgba(255,200,40,1);
+		border-radius:0.5vw;
+	}

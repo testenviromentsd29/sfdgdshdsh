@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "RistrettoPro-Regular";
+  src: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URW DIN Arabic Cond';
+  src: url('fonts/URWDINArabicCond-Black.woff2') format('woff2'),
+    url('fonts/URWDINArabicCond-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Neusa';
+  src: url('fonts/Neusa-SemiBold.woff2') format('woff2'),
+    url('fonts/Neusa-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Bold";
+  src: url("./fonts/Akrobat-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Light";
+  src: url("./fonts/Akrobat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Semibold";
+  src: url("./fonts/Akrobat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Extrabold";
+  src: url("./fonts/Akrobat-ExtraBold.otf") format("truetype");
+}
+
+
+
+
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Akrobat Bold";
+}
+
+#body {
+  height: 100vh;
+
+  overflow: hidden;
+  /*background: url(images/logo.png), linear-gradient(5.9deg, rgba(252, 215, 8, 0.556) 0%, rgba(202, 24, 24, 0) 36.02%, rgba(26, 25, 25, 0.9) 84.1%, rgba(26, 25, 25, 0.9) 100%, rgba(128, 128, 128, 1) 100%)rgba(26, 25, 25, 0.7);
+  background-repeat: no-repeat;
+  background-size: 13vw, 100%;
+  background-position: 70vw 5vh, center center;*/
+
+  width: 100%;
+  margin: 0;
+}
+
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  height: 100vh;
+  float: right;
+  margin-top: 50vh;
+}
+
+.container .tip{
+  width: fit-content;
+  padding: 0.2vh 0.5vw;
+  color: white;
+  font-size: 1.2vw;
+  text-align: left;
+  animation: shadow 2s linear infinite;
+  margin-top: 1vh;
+  /* red linear gradient */
+  background: linear-gradient(90deg, rgba(179, 1, 1, 0.637) 10%, rgba(179, 1, 1, 0.637) 10%, rgba(179, 1, 1, 0.637) 10%, rgba(179, 1, 1, 0) 100%);
+  border-radius: 0.2vw;
+}
+
+.container .tip img{
+  color: rgb(218, 2, 2);
+  text-shadow: 0 0 0.5vw rgb(179, 1, 1);
+  letter-spacing: 0vw;
+  animation: rotate 1s linear infinite;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 2vw;
+  filter: drop-shadow(0 0 0.4vw rgb(179, 1, 1));
+  position: relative;
+  top: -0.1vh;
+  /* vertical horizontal*/
+  transform: translate(0.2vw, 0.2vh);
+}
+
+
+.container .tip span{
+  margin-left: 0.5vw;
+  font-size: 1.1vw;
+  filter: none;
+  position: relative;
+  top: -0.6vh;
+  /* vertical horizontal*/
+  transform: translate(0.2vw, 0.2vh);
+}
+ 
+
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+} 
+
+@keyframes shadow{
+  0%{
+    text-shadow: 0 0 0.5vw white;
+  }
+  50%{
+    text-shadow: 0 0 0.5vw rgb(179, 1, 1);
+  }
+  100%{
+    text-shadow: 0 0 0.5vw white;
+  }
+}
