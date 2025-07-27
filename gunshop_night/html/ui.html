@@ -1,0 +1,163 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="./css/firefly.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body style="display:none;">
+	<div id="crafting-pop-up" style="display:none">
+		<div id="crafting-content">
+			<br/>
+			You're crafting a weapon!
+			<div class="w3-border"><div class="w3-yellow craft-progress" style="width:0%"></div></div>
+			<!-- <script>
+			$('.craft-progress').delay(500).queue(function () {
+				$(this).css('width', '100%')
+			});
+			</script> -->
+		</div>
+	</div>
+	
+	<img class="icon-rectangle" src="./images/icon-rectangle.png" />
+	<img class="icon-circle" src="./images/icon-circle.png" />
+	
+	<div id="wrap" style="display:none">
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+			<div class="firefly"></div>
+	
+			<button class="nav-item-exit"><i class="fal fa-times"></i></button>
+			<div id="navigation">
+				<button id="nav-melee" class="nav-item nav-active" name="melee">Melee</button>
+				<button id="nav-pistol" class="nav-item" name="pistol">Pistols</button>
+				<button id="nav-smg" class="nav-item" name="smg">SMGs & Shotguns</button>
+				<button id="nav-rifle" class="nav-item" name="rifle">Assault Rifles</button>
+				<button id="nav-extra_items" class="nav-item" name="extra_items">Extra Items</button>
+				<button id="nav-heavy_weapons" class="nav-item" name="heavy_weapons">Heavy Weapons</button>
+			</div>
+		
+			<div id="main">
+				<div id="main-name">Carbine Rifle</div>
+				<div id="main-type">Assault Rifle</div>
+				
+				<!-- <div id="main-prev"><i class="fal fa-chevron-left"></i></div> -->
+				<!-- <div id="main-next"><i class="fal fa-chevron-right"></i></div> -->
+				
+				<img class="main-img-circle1" src="./images/weapon-circle1.png"/>
+				<img class="main-img-circle2" src="./images/weapon-circle2.png"/>
+				<img class="main-img-circle3" src="./images/weapon-circle3.png"/>
+				<!-- <img class="main-img is-item" src="./images/icons/sample_kit_ar.png"/> -->
+				<img class="main-img" src="./images/icons/WEAPON_CARBINERIFLE.png"/>
+			
+				<!-- <div id="main-info"> -->
+					<!-- <i class="far fa-dot-circle"></i> Assault Rifle Ammo <br/> -->
+					<!-- <i class="far fa-stream"></i> 30 Pieces <br/> -->
+					<!-- <i class="fas fa-weight-hanging"></i> 2.5 Kg <br/> -->
+				<!-- </div> -->
+			
+				<!-- <div id="main-stats"> -->
+					<!-- <div id="weapon-stat"> -->
+						<!-- Damage <span id="stat-value">65</span><br/> -->
+						<!-- <div class="w3-border"><div class="w3-yellow" style="width:65%"></div></div> -->
+					<!-- </div> -->
+					<!-- <div id="weapon-stat"> -->
+						<!-- Recoil <span id="stat-value">80</span><br/> -->
+						<!-- <div class="w3-border"><div class="w3-yellow" style="width:80%"></div></div> -->
+					<!-- </div> -->
+					<!-- <div id="weapon-stat"> -->
+						<!-- Range <span id="stat-value">44</span><br/> -->
+						<!-- <div class="w3-border"><div class="w3-yellow" style="width:44%"></div></div> -->
+					<!-- </div> -->
+				<!-- </div> -->
+			
+				<!-- <div id="main-items-needed"> -->
+					<!-- <div id="main-items-scrollable"> -->
+						<!-- <div id="item-needed"> -->
+							<!-- <div class="item-needed-img"><img src="./images/icons/sample_kit_ar.png"/></div> -->
+							<!-- <span>Sample Weapon Kit</span> -->
+						<!-- </div> -->
+						<!-- <div id="item-needed"> -->
+							<!-- <div class="item-needed-img"><img src="./images/icons/black_money.png"/></div> -->
+							<!-- <span>Black Money</span> -->
+						<!-- </div> -->
+						<!-- <div id="item-needed"> -->
+							<!-- <div class="item-needed-img"><img src="./images/icons/sample_kit_ar.png"/></div> -->
+							<!-- <span>Sample Weapon Kit</span> -->
+						<!-- </div> -->
+						<!-- <div id="item-needed"> -->
+							<!-- <div class="item-needed-img"><img src="./images/icons/black_money.png"/></div> -->
+							<!-- <span>Black Money</span> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
+				
+				
+				<!-- <button id="btn-craft"><i class="fas fa-hammer"></i> Craft Weapon</button> -->
+			</div>
+			
+			<div id="side-prev" class="side-arrow"><i class="fas fa-chevron-left"></i></div>
+			<div id="side-next" class="side-arrow"><i class="fas fa-chevron-right"></i></div>
+			<div id="side">
+				
+				<!-- <div class="side-item"> -->
+					<!-- <div id="side-item-name">Assault Rifle MK2</div> -->
+					<!-- <div id="side-item-price">$30.000</div> -->
+					<!-- <div id="side-item-img"><img src="./images/icons/WEAPON_ASSAULTRIFLE_MK2.png"/></div> -->
+					<!-- <div id="side-item-type">Assault Rifle</div> -->
+					<!-- <div id="side-item-weight"><i class="fas fa-weight-hanging"></i> 2.5 Kg</div> -->
+				<!-- </div> -->
+				<!-- <div  class="side-item side-item-active"> -->
+					<!-- <div id="side-item-name">Carbine Rifle</div> -->
+					<!-- <div id="side-item-price">$30.000</div> -->
+					<!-- <div id="side-item-img"><img src="./images/icons/WEAPON_CARBINERIFLE.png"/></div> -->
+					<!-- <div id="side-item-type">Assault Rifle</div> -->
+					<!-- <div id="side-item-weight"><i class="fas fa-weight-hanging"></i> 2.5 Kg</div> -->
+				<!-- </div> -->
+				<!-- <div class="side-item"> -->
+					<!-- <div id="side-item-name">ISY</div> -->
+					<!-- <div id="side-item-price">$30.000</div> -->
+					<!-- <div id="side-item-img"><img src="./images/icons/WEAPON_ISY.png"/></div> -->
+					<!-- <div id="side-item-type">Assault Rifle</div> -->
+					<!-- <div id="side-item-weight"><i class="fas fa-weight-hanging"></i> 2.5 Kg</div> -->
+				<!-- </div> -->
+				<!-- <div class="side-item"> -->
+					<!-- <div id="side-item-name">SCAR MK17</div> -->
+					<!-- <div id="side-item-price">$30.000</div> -->
+					<!-- <div id="side-item-img"><img src="./images/icons/WEAPON_SCARMK17.png"/></div> -->
+					<!-- <div id="side-item-type">Assault Rifle</div> -->
+					<!-- <div id="side-item-weight"><i class="fas fa-weight-hanging"></i> 2.5 Kg</div> -->
+				<!-- </div> -->
+				<!-- <div class="side-item"> -->
+					<!-- <div id="side-item-name">Assault Rifle</div> -->
+					<!-- <div id="side-item-price">$30.000</div> -->
+					<!-- <div id="side-item-img" class="is-item"><img src="./images/icons/sample_kit_ar.png"/></div> -->
+					<!-- <div id="side-item-type">Assault Rifle</div> -->
+					<!-- <div id="side-item-weight"><i class="fas fa-weight-hanging"></i> 2.5 Kg</div> -->
+				<!-- </div> -->
+				
+			</div>
+			<div id="main-price">$30.000</div>
+			<input id="main-quantity" type="number" value="1"/>
+			<button id="btn-buy"><i class="fal fa-shopping-bag"></i> Buy Weapon</button>
+		</div>
+
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="./script.js"></script>
+</body>
+</html>

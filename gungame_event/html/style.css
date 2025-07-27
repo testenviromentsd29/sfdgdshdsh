@@ -1,0 +1,477 @@
+@font-face {
+  font-family: "RistrettoPro-Regular";
+  src: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URW DIN Arabic Cond';
+  src: url('fonts/URWDINArabicCond-Black.woff2') format('woff2'),
+    url('fonts/URWDINArabicCond-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Neusa';
+  src: url('fonts/Neusa-SemiBold.woff2') format('woff2'),
+    url('fonts/Neusa-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Bold";
+  src: url("./fonts/Akrobat-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Light";
+  src: url("./fonts/Akrobat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Semibold";
+  src: url("./fonts/Akrobat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Extrabold";
+  src: url("./fonts/Akrobat-ExtraBold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+}
+
+body {
+	background:transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+	display: none;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  height: 10vh;
+  margin-top: 2vh;
+}
+
+header .player-counter, header .kills-counter, header .headshots-counter{
+  margin-left: 2vw;
+  width:  fit-content;
+  height: 5vh;
+  font-size: 2.2vw;
+  background: rgba(13, 13, 13, 0.3);
+  border-radius: 0.2vw;
+  color: white;
+  padding: 0.5vh 0.5vw;
+  transform: scale(0.9);
+  border-left: 0.170vw solid orange;
+  filter: brightness(0.8), contrast(1.2), saturate(1.2), hue-rotate(0deg), invert(0.1), drop-shadow(0.1vw 0.1vw 0.1vw rgba(0, 0, 0, 0.5));
+  display: inline-block;
+  vertical-align: bottom;
+  position: absolute;
+  margin-top: 90vh;
+  margin-left: 15vw;
+}
+
+header .headshots-counter{
+  margin-left: 24vw;
+}
+
+header .kills-counter{
+  margin-left: 37vw;
+}
+
+header .player-counter span, header .kills-counter span, header .headshots-counter span{
+  color: rgb(153, 153, 153);
+  background-color: rgba(13, 13, 13, 0.3);
+  display: inline-block;
+  height: 5vh;
+  padding: 0.5vh 0.5vw;
+  margin-top: -0.5vh;
+  margin-right: -0.5vw;
+  filter: brightness(0.8), contrast(1.2), saturate(1.2), hue-rotate(0deg), invert(0.1);
+}
+
+header .timer{
+  display: inline-block;
+  height: 9vh;
+  vertical-align: bottom;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-right: 0.2vw solid orange;
+  border-left: 0.2vw solid orange;
+  filter: drop-shadow(0vw 0vw 0.3vw orange);
+  text-align: center;
+  width: fit-content;
+  padding: 0vh 4vw;
+  line-height: 7vh;
+  color: orange;
+  background: url(images/pubg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 6.5vw;
+  
+}
+
+header .timer-container{
+  position: absolute;
+
+  left: 28%;
+  transform: translateX(-50%);
+  width: 40%;
+  top: 76vh;
+}
+
+header .timer-container .timer-counter{
+  display: inline-block;
+  vertical-align: bottom;
+  color: orange;
+  font-size: 2.5vw;
+  filter: drop-shadow(0vw 0vw 0.2vw orange);
+  margin-top: 1.3vh;
+  margin-left: 10vw;
+  position: absolute;
+}
+
+header .timer-container .timer-text{
+  color: rgb(247, 247, 247);
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 25vw;
+  width: 9vw;
+
+  font-weight: 500;
+  text-shadow: 0vw 0vw 0.2vw black;
+  font-size: 0.85vw;
+  position: absolute;
+}
+
+header .phase-text{
+  position: absolute;
+  margin-top: 10.5vh;
+  color: white;
+  font-family: 'Akrobat Semibold';
+  font-size: 1.7vw;
+  text-shadow: 0vw 0vw 0.2vw black;
+
+  position: absolute;
+  left: 28%;
+  transform: translateX(-50%);
+  top: 76vh;
+}
+
+
+
+/* LEADERBOARD */
+
+#wrap {
+	background:  url('./images/background.png') center center no-repeat;
+	background-size: cover;
+	font-family:Bebas Nue;
+	left:50%;
+	top:0;
+	width: 100%;
+	height:100%;
+    transform: translate(-50%, 0);
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	animation:fadeIn 1s 1;
+	overflow: hidden;
+	display:none;
+}
+
+#title-large {
+	width:99%;
+	font-size:3vw;
+	line-height:3vw;
+	color:rgba(255,255,255,1);
+	text-shadow: 0 0 2vw rgba(0,0,0,0.5);
+	font-weight:400;
+	z-index:5;
+	float:left;
+	position:relative;
+}
+
+/* Style the search box */
+.search {
+	width: 100%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	width: 100%;
+	border: 0.10vw solid #f54848;
+	padding: 0.20vw;
+	height: 1.05vw;
+	outline: none;
+	color: #ffffff;
+	background: rgba(255,255,255,0.3);
+}
+
+.searchTerm:focus{
+	color: #ffffff;
+}
+
+.searchbar{
+	width: 10%;
+	position: relative;
+	left: 64.5vw;
+  	top: 10.5vw;
+}
+
+#solo-leaderboard #title-large span {
+	color:rgba(160,255,50,1);
+	text-shadow: 0 0 2vw rgba(100,255,30,0.7);
+}
+
+#team-leaderboard #title-large span {
+	color:rgba(255,80,50,1);
+	text-shadow: 0 0 2vw rgba(255,50,30,0.7);
+}
+
+.btn-solo {
+	background:rgba(255,255,255,0.05);
+	width:8vw;
+	height:2.5vw;
+	float:right;
+	font-size:0.8vw;
+	font-family:Bebas Nue;
+	color:rgba(255,255,255,1);
+	border:0.05vw solid rgba(255,255,255,0.1);
+	cursor:pointer;
+	transition:0.3s;
+	margin-bottom:-2vw;
+	z-index:99;
+	position:relative;
+}
+
+.btn-solo i {
+	margin-right:0.5vw;
+	color:rgba(160,255,50,1);
+	text-shadow:0 0 0.8vw rgba(50,255,50,1);
+}
+
+.btn-solo:hover , .solo-active{
+	background:rgba(150,225,50,1);
+	box-shadow:0 0 2vw rgba(80,255,0,0.3);
+}
+
+.btn-solo:hover i, .solo-active i {
+	color:rgba(255,255,255,1);
+}
+
+.btn-team {
+	background:rgba(255,255,255,0.05);
+	width:8vw;
+	height:2.5vw;
+	float:right;
+	font-size:0.8vw;
+	font-family:Bebas Nue;
+	color:rgba(255,255,255,1);
+	border:0.05vw solid rgba(255,255,255,0.1);
+	cursor:pointer;
+	transition:0.3s;
+	margin-left:1vw;
+	margin-bottom:-2vw;
+	z-index:99;
+	position:relative;
+}
+
+.btn-team i {
+	margin-right:0.5vw;
+	color:rgba(255,120,50,1);
+	text-shadow:0 0 0.8vw rgba(255,50,50,1);
+}
+
+.btn-team:hover, .team-active {
+	background:rgba(235,80,60,1);
+	box-shadow:0 0 2vw rgba(255,80,0,0.3);
+}
+
+.btn-team:hover i, .team-active i {
+	color:rgba(255,255,255,1);
+}
+
+
+.scoreboard {
+	position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	width: 50vw;
+	height: 30vw;
+	color: rgba(255, 255, 255, 1);
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+
+.rwd-table {
+	width:100%;
+	background:rgba(255,255,255,0.1);
+	color:rgba(255,255,255,0.95);
+	font-weight:300;
+}
+
+.strain-scrollable {
+	width:100%;
+	height:29.2vw;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+
+.rwd-table tr {
+    
+}
+
+.rwd-table th, .rwd-table td {
+	padding:0.8vw 1vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	font-weight:300;
+	font-size:1vw
+}
+
+.rwd-table th.position,
+.rwd-table td.position {
+	width:8%;
+	text-align:right;
+}
+
+.rwd-table th.name,
+.rwd-table td.name {
+	width:20%;
+	text-align:center;	
+}
+
+
+.rwd-table th.v1,
+.rwd-table th.v2,
+.rwd-table th.v3,
+.rwd-table th.v4,
+.rwd-table th.v5 {
+	width:9%;
+	text-align:center;
+}
+
+.rwd-table th.kills,
+.rwd-table th.wins {
+	width:12%;
+}
+
+
+.rwd-table td.kills,
+.rwd-table td.wins {
+	width:12%;
+	text-align:center;
+}
+
+.rwd-table td.v1,
+.rwd-table td.v2,
+.rwd-table td.v3,
+.rwd-table td.v4,
+.rwd-table td.v5 {
+	width:9%;
+	text-align:center!important;
+}
+
+
+.rwd-table td.points,
+.rwd-table th.points {
+	width:10%;
+	text-align:center;
+}
+
+
+.rwd-table td.first {
+	font-weight:400;
+	color:rgba(255,220,50,1);
+	text-shadow: 0 0 1vw rgba(255,200,50,1);
+}
+
+.rwd-table td.second {
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	text-shadow: 0 0 1vw rgba(255,255,255,1);
+}
+
+.rwd-table td.third {
+	font-weight:400;
+	color:rgba(255,140,100,1);
+	text-shadow: 0 0 1vw rgba(255,100,60,1);
+}
+
+::-webkit-input-placeholder {
+	color: #ffffff;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+	background: rgba(255,255,255,0);
+	border: none;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+	width: 0.2vw;
+	height: 0.4vw;
+	background-color: transparent;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+	background: rgba(255,200,40,1);
+	border: 0.1vw solid rgba(255,200,40,1);
+	border-radius:0.5vw;
+}
