@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background:transparent;
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+/* -- EVENT KILLS -- */
+#event-kills-wrap {
+	font-size:1.2vw;
+	color: #fff;
+	position:absolute;
+    vertical-align: top;
+    transition: 0.2s;
+    bottom:14vw;
+    left: 6vw;
+    position: absolute;
+	font-family:Bebas Nue;
+}
+
+#event-kills-text {
+	font-size:0.9vw;
+	line-height:1.4vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,1);
+	text-shadow: 0 0 0.1vw rgba(0,0,0,0.8);
+	text-align:center;
+}
+
+#event-kills-text span{
+	color:rgba(255,70,70,1);
+	font-weight:bold;
+	font-size:1.8vw;
+	filter: drop-shadow(0 0 0.5vw rgba(255,0,0,1));
+}
+
+/* -- TOP CAPTURING -- */
+#top-wrap {
+	background:rgba(0,0,0,0);
+    bottom:2.5vw;
+    left: 50%;
+	padding-top:1vw;
+    position: absolute;
+	width:20vw;
+	transform:translate(-50%,0%);
+	font-family:Bebas Nue, Myriad Pro Cond;
+}
+
+#capturing-text {
+	background:rgba(0,0,0,0.4);
+	width:4.8vw;
+	font-size:0.9vw;
+	line-height:1vw;
+	padding:0.2vw 0.5vw;
+	position:absolute;
+	left:50%;
+	border-radius:0.2vw;
+	text-align:center;
+	color:rgba(255,255,255,0.7);
+	transform:translate(-50%,0%);
+}
+
+#capturebar {
+	width: 3vw;
+	height: 3vw;
+	position:absolute;
+	top:1.7vw;
+	left:50%;
+	transform:translate(-50%,0%);
+}
+
+#capturebar svg {
+	height: 100%;
+	width: 100%;
+	fill: none;
+	stroke: rgb(255, 120, 30);
+	stroke-width: 20; 
+}
+
+
+#capture-area {
+	font-size:1.3vw;
+	line-height:1.3vw;
+	font-weight:600;
+	letter-spacing:0.03vw;
+	text-align:center;
+	color:rgba(255, 120, 30);
+	text-shadow: 0 0 0.5vw rgb(253, 89, 13);
+}
+
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+	background: rgba(255,255,255,0);
+	border: none;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+	width: 0.2vw;
+	height: 0.4vw;
+	background-color: transparent;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+	background: rgba(255,200,40,1);
+	border: 0.1vw solid rgba(255,200,40,1);
+	border-radius:0.5vw;
+}

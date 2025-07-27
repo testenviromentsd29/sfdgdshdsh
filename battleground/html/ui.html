@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/hover.css">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<script src="./progressbar.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="event-kills-wrap" style="display:none">
+		<div id="event-kills-text">KILLS: <span id="kills-text">0</span><br>Type /dropcrate at <span>100</span> kills</div>	
+	</div>
+
+	<!-- home -->
+	<div id="top-wrap" style="display:none">
+		<div id="capturing-text">CAPTURING</div>
+		<div id="capturebar"></div>
+		<script>
+			var bar = new ProgressBar.Circle(capturebar, {
+				strokeWidth: 8,
+				fill: 'rgba(20,20,20,0.5)',
+				color: 'rgba(0,0,0,0.3)',
+				trailColor: 'rgba(0,0,0,0.3)',
+				trailWidth: 16,
+				easing: 'easeInOut',
+				duration: 2000,
+				svgStyle: null,
+				text: {
+					value: '',
+					alignToBottom: false
+				},
+				
+				// Set default step function for all animate calls
+				step: (state, bar) => {
+					bar.path.setAttribute('stroke', state.color);
+					var value = Math.round(bar.value() * 120);
+					bar.setText("<div id='capture-area'>💀</div>");
+					bar.text.style.color = state.color;
+				}
+			});
+			bar.animate(80 / 120); 
+		</script>
+	</div>
+	
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
