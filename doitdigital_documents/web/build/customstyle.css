@@ -1,0 +1,8 @@
+/* Add your custom styles in this file */
+.MuiListItemButton-root MuiListItemButton-gutters Mui-selected MuiButtonBase-root {
+    background-color: aqua;
+}
+
+.css-17wuqhm.Mui-selected {
+    background-color: aqua;
+}

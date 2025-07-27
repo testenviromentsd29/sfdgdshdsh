@@ -1,0 +1,470 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background: transparent;
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden;
+}
+
+.reset-size {
+	position:absolute;
+	bottom:1vw;
+	right:1vw;
+	width:2.8vw;
+	height:2.8vw;
+	background:rgba(210,30,30,1);
+	border:none;
+	font-size:0.5vw;
+	font-family:Bebas Nue;
+	color:rgba(255,255,255,1);
+	text-shadow:0 0 0.5vw rgba(0,0,0,0.5);
+	outline:none;
+	padding-bottom:0.5vw;
+	cursor:pointer;
+	transition:0.2s;
+	display:none;
+}
+.reset-size:hover {background:rgba(255,50,50,1);box-shadow:0 0 2vw rgba(255,0,0,0.5);}
+.reset-size i {font-size:0.8vw;margin-bottom:0.2vw;}
+
+/* BOOMBOX */
+
+#wrap-boombox {
+    display: none;
+    position: relative;
+	margin:15vw auto;
+	/* background:url('../images/boombox.png') 50% 50% no-repeat; */
+	/* background-size:contain; */
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	width: 30vw;
+	height: 19vw;
+	color: rgba(255, 255, 255, 1);
+	filter:drop-shadow(0 0 3vw rgba(0,0,0,0.6));
+	resize: both;
+	overflow: hidden;
+}
+
+#wrap-boombox img {
+	width:100%;
+	height:100%;
+	z-index:-15;
+	position:absolute;
+}
+
+
+#wrap-boombox .strain-input {
+	background:rgba(15,35,50,0.9);
+	color:rgba(255,255,255,1);
+	width:30%;
+	height:9%;
+	line-height:9%;
+	font-size:0.7vw;
+	padding:0 1%;
+	text-align:center;
+	border:1px solid rgba(255,255,255,0.2);
+	font-weight:normal;
+	font-family:Bebas Nue;
+	outline:none;
+	position:absolute;
+	top:24%;
+	left:26%;
+}
+
+#wrap-boombox #submit-btn-boombox {
+	background: rgba(130,195,75,1);
+	padding:0 4.5%;
+	height:9.3%;
+	color:#fff;
+	line-height:9.3%;
+	font-size:0.8vw;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:1px solid rgba(130,195,75,1);
+	font-family:Bebas Nue;
+	text-align:center;
+	position:absolute;
+	top:24.1%;
+	left:60%;
+}
+
+#wrap-boombox #submit-btn-boombox:hover {
+	background: rgba(180,255,50,1);
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(100 255 50 / 80%);
+	cursor:pointer;
+}
+
+#wrap-boombox #youtube-thumbnail-boombox {
+	width:25%;
+	height:38%;
+	border-radius:50%;
+	position:absolute;
+	left:5%;
+	bottom:10%;
+	opacity:0.8;
+}
+
+#wrap-boombox #play-btn-boombox {
+	background: rgba(130,195,75,1);
+	width:5.5%;
+	height:9%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.8vw;
+	line-height:9%;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:17%;
+	left:44%;
+	border-radius:0.2vw;
+}
+
+#wrap-boombox #play-btn-boombox:hover {
+	background: rgba(180,255,50,1);
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(125 255 50 / 50%);
+	cursor:pointer;
+}
+
+
+#wrap-boombox #stop-btn-boombox {
+	background: rgba(215,50,50,1);
+	width:5.5%;
+	height:9%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.8vw;
+	line-height:9%;
+	text-decoration:none;
+	cursor: pointer;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:17%;
+	right:44%;
+	border-radius:0.2vw;
+}
+
+#wrap-boombox #stop-btn-boombox:hover {
+	background:rgba(255,60,60,1);
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(255 0 0 / 80%);
+	cursor:pointer;
+}
+
+#wrap-boombox #pause-btn-boombox {
+	background: #dc6714;
+	width:2vw;
+	height:2vw;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:1vw;
+	line-height:2vw;
+	text-decoration:none;
+	cursor: pointer;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+}
+
+#wrap-boombox #pause-btn-boombox:hover {
+	color:#fff;
+	box-shadow: 0 0 20px rgb(255 150 0 / 80%);
+	cursor:pointer;
+}
+
+#wrap-boombox #take-btn-boombox {
+	background: rgba(215,80,40,1);
+	width:5%;
+	height:15%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:1vw;
+	line-height:15%;
+	text-decoration:none;
+	cursor: pointer;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	top:2%;
+	right:1%;
+	border-radius:0.2vw;
+}
+
+#wrap-boombox #take-btn-boombox:hover {
+	background:rgba(255,100,60,1);
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(255 80 0 / 80%);
+	cursor:pointer;
+}
+
+/* RADIO CAR */
+
+#wrap-radiocar {
+    display: none;
+    position: relative;
+	margin:15vw auto;
+	/* background:url('../images/boombox.png') 50% 50% no-repeat; */
+	/* background-size:contain; */
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	width: 30vw;
+	height: 19vw;
+	color: rgba(255, 255, 255, 1);
+	filter:drop-shadow(0 0 3vw rgba(0,0,0,0.6));
+	resize: both;
+	overflow: hidden;
+}
+
+#wrap-radiocar img {
+	width:100%;
+	height:100%;
+	z-index:-15;
+	position:absolute;
+}
+
+#wrap-radiocar .strain-input {
+	background:rgba(20,20,20,0.9);
+	color:rgba(255,255,255,1);
+	width:28%;
+	height:9%;
+	line-height:9%;
+	font-size:0.8vw;
+	padding:0 1%;
+	text-align:left;
+	border:0.05vw solid rgba(255,255,255,0.2);
+	font-weight:normal;
+	font-family:Bebas Nue;
+	outline:none;
+	position:absolute;
+	bottom:20%;
+	left:44%;
+}
+
+#wrap-radiocar #submit-btn-radiocar {
+	background: rgba(90,225,125,1);
+	padding:0 2%;
+	height:9%;
+	color:#fff;
+	line-height:9%;
+	font-size:0.8vw;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:none;
+	font-family:Bebas Nue;
+	text-align:center;
+	position:absolute;
+	bottom:20%;
+	left:75%;
+}
+
+#wrap-radiocar #submit-btn-radiocar:hover {
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(50 255 100 / 80%);
+	cursor:pointer;
+}
+
+#wrap-radiocar #youtube-thumbnail-radiocar {
+	width:45%;
+	height:45%;
+	border-radius:0.2vw;
+	position:absolute;
+	left:50%;
+	top:2%;
+	opacity:0.8;
+	transform:translate(-50%,0);
+}
+
+#wrap-radiocar #play-btn-radiocar {
+	background: rgba(90,225,125,1);
+	width:5.5%;
+	height:9%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.8vw;
+	line-height:9%;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:5%;
+	right:8%;
+	border-radius:0.2vw;
+}
+
+#wrap-radiocar #play-btn-radiocar:hover {
+	background: rgba(150,255,50,1);
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(125 255 50 / 50%);
+	cursor:pointer;
+}
+
+
+#wrap-radiocar #stop-btn-radiocar {
+	background: #dc1414;
+	width:5.5%;
+	height:9%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.8vw;
+	line-height:9%;
+	text-decoration:none;
+	cursor: pointer;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:5%;
+	right:2%;
+	border-radius:0.2vw;
+}
+
+#wrap-radiocar #stop-btn-radiocar:hover {
+	background:#dc3030;
+	color:#fff;
+	box-shadow: 0 0 1vw rgb(255 0 0 / 80%);
+	cursor:pointer;
+}
+
+#wrap-radiocar #volume-up-btn-radiocar {
+	background: rgba(0,0,0,0);
+	width:4.5%;
+	height:7%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.7vw;
+	line-height:7%;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:25.6%;
+	left:12.8%;
+	border-radius:0.2vw;
+}
+
+#wrap-radiocar #volume-up-btn-radiocar:hover {
+	background: #50d889;
+	color:#fff;
+	box-shadow: 0 0 2vw #50d889;
+	cursor:pointer;
+}
+
+#wrap-radiocar #volume-down-btn-radiocar {
+	background: rgba(0,0,0,0);
+	width:4.5%;
+	height:7%;
+	color:#fff;
+	font-family:Bebas Nue;
+	font-size:0.7vw;
+	line-height:7%;
+	text-decoration:none;
+	cursor: pointer!important;
+	transition: 0.3s;
+	border:none;
+	text-align:center;
+	position:absolute;
+	bottom:16.7%;
+	left:12.4%;
+	border-radius:0.2vw;
+}
+
+#wrap-radiocar #volume-down-btn-radiocar:hover {
+	background:#d44444;
+	color:#fff;
+	box-shadow: 0 0 2vw #d44444;
+	cursor:pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::placeholder {
+  color: rgba(255,255,255,0.4);
+  font-weight:normal;
+}
+
+
+::-webkit-resizer {
+    background: url('../images/icon-resizer.png');
+}

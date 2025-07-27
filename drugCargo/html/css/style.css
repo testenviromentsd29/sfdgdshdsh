@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+}
+
+body {
+	background: transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+}
+
+/* -- EVENT TIMER -- */
+#event-timer-wrap {
+	font-size:1.2vw;
+	color: #fff;
+	position:absolute;
+    vertical-align: top;
+    transition: 0.2s;
+    bottom:14vw;
+    left: 6vw;
+    position: absolute;
+	font-family:Bebas Nue;
+}
+
+#event-timer-text {
+	font-size:0.9vw;
+	line-height:1.4vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,1);
+	text-shadow: 0 0 0.1vw rgba(0,0,0,0.8);
+	text-align:center;
+}
+
+#event-timer-text span{
+	color:rgba(255,70,70,1);
+	font-weight:bold;
+	font-size:1.8vw;
+	filter: drop-shadow(0 0 0.5vw rgba(255,0,0,1));
+}
+
+/* ==== GANG WAR RANKING ==== */
+
+#wrap-gang-ranking {
+	font-family:Bebas Nue;
+}
+
+#ranking-title {
+	position:absolute;
+	font-family:SignPainter;
+	width:100%;
+	top:20%;
+	left:50%;
+	transform:translate(-50%, 0%);
+	font-size:2.5vw;
+	color:rgba(255, 255, 255,1);
+	text-shadow: 0 0 1.5vw rgba(255,255,255,0.4);
+	text-align:center;
+	z-index:4;
+}
+
+#ranking-title span {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(210,150,0,1);
+}
+
+#killsandbounty {
+	position:absolute;
+	left:50%;
+	top:27%;
+	transform:translate(-50%,-50%);
+	font-size:1.2vw;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+}
+
+#killsandbounty span{
+	color:rgba(160,255,50,1);
+	text-shadow: 0 0 1vw rgba(120,255,50,1);
+	font-weight:400;
+}
+
+#score-scrollable {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:20vw;
+	height:20vw;
+	overflow-y: scroll;
+	position:absolute
+}
+
+.rwd-table {
+	background: rgba(15,15,15,0.6);
+	width: 100%;
+	overflow-y: scroll;
+	padding:0.4vw;
+}
+
+.rwd-table th, .rwd-table td {
+	padding: 0.5vw;
+	border: 0.05vw solid rgba(255,255,255,0.1);
+	color: rgba(255,255,255,1);
+	font-size:0.9vw;
+	font-weight:300;
+	text-align:center;
+}
+
+
+.rwd-table th.name {
+  text-align: left;
+}
+
+.rwd-table th.first {
+	color:rgba(255,220,50,1);
+}
+
+.rwd-table th.third {
+	color:#dc8d67;
+}
+
+.rwd-table tr.first {
+  background: url('../images/first.png') 0.3vw 0.5vw no-repeat, rgba(120, 100, 0, 0.8);
+}
+
+.rwd-table tr.second {
+  background: url('../images/second.png') 0.3vw 0.5vw no-repeat, rgba(120, 120, 120, 0.8);
+}
+
+.rwd-table tr.third {
+  background: url('../images/third.png') 0.3vw 0.5vw no-repeat, rgba(120, 40, 0, 0.8);
+}
+
+
+.scoreboard {
+  background:radial-gradient(circle at -10% 50%, rgba(160,0,0,1) 0%, rgba(0,0,0,0) 60%);
+  width:35vw;
+  height:100%;
+  padding:0.5vw;
+  top:50%;
+  left:0;
+  position:absolute;
+  transform:translate(0%,-50%);
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+	::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background: rgba(255,255,255,0);
+		border: none;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 0.2vw;
+		height: 0.4vw;
+		background-color: transparent;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background: rgba(255,200,40,1);
+		border: 0.1vw solid rgba(255,200,40,1);
+		border-radius:0.5vw;
+	}

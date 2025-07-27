@@ -1,0 +1,3 @@
+exports('ForceCloseMenu', function()
+	--
+end)
