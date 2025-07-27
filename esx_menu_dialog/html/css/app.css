@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto';
+	background:transparent;
+	/* background:  url('https://i.imgur.com/WRpB6zr.png') bottom left no-repeat; */
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden;
+}
+
+#controls {
+	font-size: 3em;
+	color: #FFF;
+	position: absolute;
+	bottom: 30;
+	right: 30;
+}
+
+.controls {
+	display: none;
+}
+
+.dialog {
+	background:rgba(25,25,25,1);
+	background-size:cover;
+	font-family: 'Roboto';
+	color: rgba(255,255,255,1);
+	position: absolute;
+	bottom:4vw;
+	right:0;
+	left:0;
+	margin:0 auto;
+	width: 20vw;
+	height: auto;
+	text-align:center;
+	box-sizing:border-box;
+	animation:fadeIn 0.5s 1;
+	padding:0.5vw;
+	border-radius:0.6vw;
+}
+
+.dialog .head {background:
+	radial-gradient(70% 100% at 00% 100%, rgba(255,255,255,0.1), transparent),
+	radial-gradient(60% 120% at 50% 0%, rgba(255,50,0,0.5), transparent),
+	rgba(21,22,25,1);
+	text-align: center;
+	width:99%;
+	height: 2.5vw;
+	text-shadow: 0 0 1px rgba(0,0,0,1);
+	border-radius:0.5vw;
+	font-size:0.75vw;
+	font-weight:600;
+	margin-bottom:0.5vw;
+	position:relative;
+}
+.dialog.big {
+	height: 10vw;
+}
+
+.dialog .head span {width:90%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+.dialog input[type="text"] {font-family: 'Roboto';width: 100%;height: 2.5vw;margin:0 auto 0.5vw auto;outline: none;background:rgba(255,255,255,0.05);text-align: center;line-height: 2.5vw;color: rgba(255,255,255,1);font-size:0.7vw;border:1px solid transparent;transition:0.3s;border-radius:0.5vw;z-index:2;position:relative;}
+.dialog input[type="text"]:active, .dialog input[type="text"]:hover {background:rgba(255,255,255,0.07);color: white;border:1px solid rgba(255,255,255,0.05);}
+.dialog textarea {font-family: 'Roboto';width: 100%;height: 6vw;padding:0.2vw;background: rgba(255,255,255,0.1);color:rgba(255,255,255,1);border: 0.01vw solid rgba(255,255,255,0.1);margin:0.5vw 0;outline:none;font-size:0.8vw;z-index:2;position:relative;}
+
+.dialog button[name="submit"], .dialog button[name="cancel"] {
+	font-family: 'Roboto';
+	width:49%;
+	height:2.5vw;
+	background:linear-gradient(45deg, rgba(0,255,0,0.2) 0%, transparent 100%), #212121;
+	border:none;
+	font-size:0.7vw;
+	font-weight:400;
+	border-radius:0.5vw;
+	border:1px solid rgba(150,255,50,0.3);
+	margin:0 0.5% 0 0.5%;
+	transition:0.2s;
+	cursor:pointer;
+	color: rgba(255,255,255,1);
+	text-transform:uppercase;
+	position:relative;
+	text-align:center;
+	box-sizing:border-box;
+	float:left;
+}
+
+.dialog button[name="cancel"] {background:linear-gradient(45deg, rgba(255,60,60,0.2) 0%, transparent 100%), #212121;border:1px solid rgba(255,100,60,0.5);}
+.dialog button[name="submit"] i {position:absolute;top:52%;left:0.7vw;transform:translate(0,-50%);color:rgba(150,255,50,1);}
+.dialog button[name="cancel"] i {position:absolute;top:52%;left:0.7vw;transform:translate(0,-50%);color:rgba(255,100,60,1);}
+
+
+.dialog button[name="submit"]:hover {transform:scale(0.95);background:linear-gradient(45deg, rgba(50,255,50,0.5) 0%, transparent 100%), #212121;box-shadow: 0 0 2vw rgba(50,255,50, 0.2);cursor:pointer;filter:saturate(1.2) brightness(1.2);}
+.dialog button[name="cancel"]:hover {transform:scale(0.95);background:linear-gradient(45deg, rgba(255,70,50,0.4) 0%, transparent 100%), #212121;box-shadow: 0 0 2vw rgba(255,60,40,0.25);cursor:pointer;filter:saturate(1.2) brightness(1.2);}
+
+
+.head::before, .head::after {content: "";flex-grow: 1;background: transparent;height: 2px;margin: 0px 3px;}
+
+::-webkit-scrollbar-track {background: rgba(255,255,255,0);border: none;border-radius:0.4vw;}
+::-webkit-scrollbar {width: 0.1vw;height: 0.4vw;background-color: transparent;border-radius:0.4vw;}
+::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, 0.5);}
