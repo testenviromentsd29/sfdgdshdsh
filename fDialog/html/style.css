@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "RistrettoPro-Regular";
+  src: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URW DIN Arabic Cond';
+  src: url('fonts/URWDINArabicCond-Black.woff2') format('woff2'),
+    url('fonts/URWDINArabicCond-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Neusa';
+  src: url('fonts/Neusa-SemiBold.woff2') format('woff2'),
+    url('fonts/Neusa-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Bold";
+  src: url("./fonts/Akrobat-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Light";
+  src: url("./fonts/Akrobat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Semibold";
+  src: url("./fonts/Akrobat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Extrabold";
+  src: url("./fonts/Akrobat-ExtraBold.otf") format("truetype");
+}
+
+
+
+
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Akrobat Bold";
+}
+
+#body {
+  height: 100vh;
+  box-shadow: inset 0px 0px 15vw 1vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container{
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 70vh;
+}
+
+.container header{
+  height: 13vh;
+  display: flex;
+}
+
+.container header .header-img{
+  background: url(https://cdn.discordapp.com/attachments/997482194278809645/1068190598038835340/Symbol.png);
+  height: 100%;
+  width: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container header .title{
+  width: 56%;
+  height: 100%;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 1vw;
+  font-size: 2.5vw;
+  font-family: 'Akrobat Extrabold';
+  color: rgb(228, 10, 10);
+}
+
+.container header .title span{
+  color: white;
+}
+
+.container header .title::after{
+  content: "GREEK MAFIA";
+  position: absolute;
+  transform: rotate(90deg);
+  color: white;
+  font-family: 'Akrobat Bold';
+  font-size: 1.6vw;
+  margin-left: 6vw;
+  margin-top: -3vh;
+}
+
+.container .question{
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  padding: 0.5vw;
+  font-size: 1.9vw;
+  font-family: 'Akrobat Bold';
+  color: white;
+  margin-left: 0.5vw;
+  text-shadow: 0px 0px 0.5vw black;
+}
+
+.container .dotted-container{
+  border: 0.1vw dashed rgba(255, 255, 255, 0.795);
+  width: 70%;
+  height: 60%;
+  margin-left: 20%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.2vw;
+  margin-top: 5vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container .dotted-container textarea{
+  height: 500%;
+  width: 95%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Akrobat Bold';
+  font-size: 1.2vw;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  padding: 0;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  resize: none;
+  overflow: hidden;
+}
+
+.container .dotted-container::-webkit-scrollbar {
+  display: none;
+}
+
+.container .dotted-container::-webkit-scrollbar-track {
+  display: none;
+}
+
+.container .dotted-container::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.container .dotted-container::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
+
+.container button{
+  width: 70%;
+  height: 10%;
+  margin-left: 20%;
+  margin-top: 2vh;
+  border: none;
+  border-radius: 0.2vw;
+  background: rgb(228, 10, 10);
+  color: white;
+  font-family: 'Akrobat Bold';
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 0.5vw;
+}
+
+.container button:hover{
+  filter: drop-shadow(0px 0px 0.5vw red);
+}

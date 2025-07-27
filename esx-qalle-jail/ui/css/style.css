@@ -1,0 +1,367 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+}
+
+body {
+	background:  transparent;
+	/* background:  url('../images/background.png') center center no-repeat fixed, url('https://cdn.discordapp.com/attachments/686753234899042368/866689889885093898/unknown.png2') center center no-repeat fixed; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+}
+
+#wrap {	
+	font-family:Bebas Nue;
+	left:50%;
+	top:0;
+	width: 100%;
+    transform: translate(-50%, 0);
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	animation:fadeIn 2s 1;
+}
+
+
+
+/* -- EVENT WRAP -- */
+
+#event-wrap {
+	font-size:1.2vw;
+	color: rgba(255,255,255,1);
+	top:0;
+	margin-left: auto;
+	margin-right: auto;
+	width:22vw;
+}
+
+#event-ribbon {
+	background:  url('../images/ribbon.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:6vw;
+	height:10vw;
+	margin-right:1vw;
+	padding: 3.2vw 0;
+	float:left;
+	opacity:1;
+	filter: drop-shadow(0 0 1vw rgba(255,210,55,0.5));
+}
+
+#event-icon {
+	font-size:2.7vw;
+	color:rgba(45,45,45,1);
+}
+
+#event-content {
+	width:15vw;
+	float:left;
+	opacity:1;
+	text-align:left;
+}
+
+
+#event-text {
+	font-size:1vw;
+	line-height:1vw;
+	color:rgba(255,255,255,0.6);
+	letter-spacing:0.1vw;
+	margin:1vw auto 0.5vw auto;
+}
+
+#event-title {
+	font-size:2vw;
+	line-height:2vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+	margin:0.8vw auto 0.5vw auto;
+}
+
+#event-description {
+	font-size:1vw;
+	line-height:1.4vw;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+}
+
+
+/* -- EVENT PROGRESS WRAP -- */
+
+#event-progress-wrap {
+	font-size:1.2vw;
+	color: rgba(255,255,255,1);
+	top:8vw;
+	right:12vw;
+	margin-left: auto;
+	margin-right: auto;
+	width:20vw;
+	float:right;
+	position:absolute;
+}
+
+
+#event-progress-text {
+	font-size:0.8vw;
+	line-height:0.8vw;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+	text-align:left;
+	float:left;
+	margin:0.8vw 0;
+}
+
+#event-progress-organizer {
+	font-size:0.8vw;
+	line-height:0.8vw;
+	color:rgba(255,255,255,0.4);
+	letter-spacing:0.1vw;
+	text-align:right;
+	font-weight:300;
+	margin:0.8vw 0;
+}
+
+#event-progress-icon {
+	font-size:1.2vw;
+	color:rgba(255,210,55,1);
+	text-shadow:0 0 1vw rgba(255,210,55,0.5);
+	text-align:center;
+	margin-right:0.5vw;
+}
+
+#event-progress-description {
+	font-size:1.1vw;
+	line-height:1.3vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+	text-align:left;
+}
+
+.event-progress-bar {
+    width: 100%;
+    height: 0.1vw;
+    background: rgba(255,255,255,0.2);
+    margin:1vw auto;
+    border-radius: 0.5vw;
+}
+
+.event-progress-bar-fill {
+    display: block;
+	width:0%;
+    height: 0.1vw;
+    background: rgba(255,210,55,1);
+    border-radius: 0.5vw;
+	box-shadow:0 0 1vw 0.1vw rgba(255,210,55,0.7);
+}
+
+#event-progress-time {
+	font-size:0.8vw;
+	line-height:0.8vw;
+	color:rgba(255,255,255,0.4);
+	letter-spacing:0.1vw;
+	text-align:left;
+	float:left;
+	font-weight:300;
+}
+
+
+#event-progress-place {
+	font-size:0.8vw;
+	line-height:0.8vw;
+	color:rgba(255,255,255,0.4);
+	letter-spacing:0.1vw;
+	text-align:right;
+	font-weight:300;
+	float:right;
+}
+
+
+
+
+/* -- FIRE WRAP -- */
+
+#fire-wrap {
+	background:  url('../images/fire.png') top center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	font-size:1.2vw;
+	color: rgba(255,255,255,1);
+	top:0;
+	margin-left: auto;
+	margin-right: auto;
+	padding:2.5vw 6vw;
+	width:30vw;
+	height:12vw;
+}
+
+#fire-title {
+	font-size:1.4vw;
+	line-height:1.4vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+}
+
+#fire-description {
+	font-size:0.9vw;
+	line-height:1.1vw;
+	color:rgba(255,255,255,0.8);
+	letter-spacing:0.15vw;
+	margin-top:1vw;
+	float:left;
+}
+
+#fire-button {
+	background:rgba(255,50,50,1);
+	border:solid 0.1vw rgba(255,50,50,1);
+	font-size:1vw;
+	font-weight:600;
+	line-height:1vw;
+	padding:0.4vw 0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	margin-top:1vw;
+	margin-left:1vw;
+	
+}
+
+#fire-button:hover {
+	transform: scale(1.05);
+	background:rgba(255,160,40,1);
+	border:solid 0.1vw rgba(255,160,40,1);
+	box-shadow: 0 0 2.5vw rgba(255,50,50,1);
+}
+
+
+/* -- ARREST WRAP -- */
+
+#arrest-wrap {
+	font-size:1.2vw;
+	color: rgba(255,255,255,1);
+	top:0;
+	margin-left: auto;
+	margin-right: auto;
+	width:32vw;
+	height:9vw;
+}
+
+#arrest-table {
+	width:100%;
+	height:100%;
+	border-collapse: separate;
+	border-spacing:1vw;
+}
+
+table td.row-timer {
+	width:36%;
+}
+
+table td.row-icon {
+	width:28%;
+	border-left:0.15vw solid rgba(215,55,55,1);
+	border-right:0.15vw solid rgba(215,55,55,1);
+	padding: 0 1vw;
+}
+
+table td.row-text {
+	width:36%;
+}
+
+#arrest-timer {
+	font-size:3.2vw;
+	line-height:3.2vw;
+	font-weight:600;
+	color:rgba(215,55,55,1);
+	text-align:center;
+	text-shadow:0 0 1vw rgba(215,55,55,0.4);
+}
+
+
+#arrest-icon {
+	background:  url('../images/arrest.png') bottom center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	text-align:center;
+	width:3.2vw;
+	height:3.2vw;
+	margin:0 auto;
+	opacity:1;
+	filter: drop-shadow(0 0 1vw rgba(215,55,55,0.5));
+}
+
+
+#arrest-text {
+	font-size:0.8vw;
+	line-height:0.8vw;
+	color:rgba(215,55,55,1);
+	letter-spacing:0.1vw;
+	margin:0.5vw auto;
+}
+
+#arrest-title {
+	font-size:1.4vw;
+	line-height:1.4vw;
+	font-weight:600;
+	color:rgba(255,255,255,1);
+	letter-spacing:0.1vw;
+	margin:0.8vw auto;
+}
+
+#arrest-description {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,255,255,0.4);
+	letter-spacing:0.1vw;
+}
+
+#player-name {
+	font-weight:600;
+	color:rgba(255,255,255,0.5);
+}

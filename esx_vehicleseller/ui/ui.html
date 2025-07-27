@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/hover.css">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="./progressbar.js"></script>
+</head>
+<body style="display: none;">
+	
+
+	<!-- home -->
+	<div id="wrap" style="display: none;">
+
+		<div id="side-menu">
+			<div id="engine-state">
+				<center>
+				<i class="fas fa-charging-station"></i> STATE OF ENGINE
+				<div id="levelbar"></div>
+				</center>
+				<script>
+
+				</script>
+			
+			</div>
+			
+				
+		</div>
+		
+		<div id="strain-content" >
+			<table style="width:100%">
+			<tr>
+				<td>
+					<div id="model-block">
+						<div id="title"><i class="far fa-car"></i> VEHICLE MODEL</div>
+						<span id="vehicle-model">LAMBORGHINI URUS</span>
+						<div id="plate">1NDD425</div>
+					</div>
+					<br/>
+					
+					<div id="owner-block">
+						<div id="title"><i class="fas fa-key"></i> VEHICLE OWNER</div>
+						<span id="vehicle-owner">STRAIN KAPP4CCINO</span>
+					</div>
+					<br/>
+					
+					<div id="tank-block">
+						<div id="title"><i class="fas fa-gas-pump"></i> TANK CAPACITY</div>
+						<span id="tank-capacity">84 LITERS</span>
+					</div>
+					
+					<div id="insurance-block">
+						<div id="title"><i class="fas fa-car-crash"></i> INSURANCE</div>
+						<span id="insurance">N/A</span>
+					</div>
+					<br/>
+					
+					<div id="turbo-block">
+						<table>
+							<tr>
+								<td><img style="width:2vw;" src="./images/turbo.png"/></td>
+								<td>
+								<div id="title"><i class="fab fa-gripfire"></i> TURBO</div>
+								<span id="turbo-inactive">INACTIVE</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<br/>
+
+					<div id="dollar-block" style="display:none">
+						<div id="title"><i class="fas fa-dollar-sign"></i> WHITE MONEY</div>
+						<span id="dollar-price">$380.000</span>
+					</div>
+					
+					<div id="black-block" style="display:none">
+						<div id="title"><i class="fas fa-dollar-sign"></i> BLACK MONEY</div>
+						<span id="black-price">$140.000</span>
+					</div>
+					
+					<div id="donation-block" style="display:none">
+						<div id="title">DONATION COINS</div>
+						<span id="donation-price"><i class="fas fa-coins"></i> 150</span>
+					</div>
+					
+					<br/>
+					
+					<button id="btn-buy" onclick="buyvehicle()" >BUY VEHICLE</button>
+					<br/>
+					<button id="btn-test" onclick="testdrive()" >TEST DRIVE</button>
+					<button id="btn-sell" style="display:none">SELL TO GOVERNMENT</button>
+				</td>
+				<td>
+					<div id="engine-block">
+						<div id="title">ENGINE</div>
+						<span id="engine-level">LEVEL 3</span>
+					</div>
+					<div id="brakes-block">
+						<div id="title">BRAKES</div>
+						<span id="brakes-level">LEVEL 2</span>
+					</div>
+					<br/>
+					
+					<div id="suspension-block">
+						<div id="title">SUSPENSION</div>
+						<span id="suspension-level">LEVEL 1</span>
+					</div>
+					<div id="transmission-block">
+						<div id="title">TRANSMISSION</div>
+						<span id="transmission-level" class="max">MAX LEVEL</span>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+		
+    </div>
+	
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
