@@ -1,0 +1,261 @@
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background: transparent;
+	background-size:cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+
+#wrap {
+	display: none;
+	background:radial-gradient(circle at left, rgba(150,0,80,1) -20%, rgba(40,40,40,0.4) 50%);
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width: 100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color: rgba(0, 0, 0, 0.9);
+}
+
+
+.emote-menu {
+	background:rgba(0,0,0,0);
+	top:50%;
+	left:2vw;
+    width:20vw;
+	height:21vw;
+	position:absolute;
+	transform:translate(0%,-50%);
+	border-radius:0.5vw;
+}
+
+#sexrp-title {
+	width:100%;
+	font-family:SignPainter;
+	font-size:5vw;
+	line-height:5vw;
+	color:rgba(255,255,255,1);
+	text-align:center;
+	transform:rotate(-5deg);
+	text-shadow:0 0 2vw rgba(255,50,155,1);
+}
+
+#start-stop {
+	width:100%;
+	position:absolute;
+	bottom:1.5vw;
+}
+
+#start-emote {
+	width:6vw;
+	height:2.5vw;
+	background:rgba(150,200,50,1);
+	outline:none;
+	text-align:center;
+	color:#fff;
+	font-size:1vw;
+	border:none;
+	line-height:1.5vw;
+	border-radius:2vw;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	transition: 0.3s;
+	margin: 0 0.3vw;
+}
+
+#start-emote:hover {
+	cursor:pointer;
+	background:rgba(190,255,50,1);
+	color:rgba(80,80,80,1);
+	box-shadow: 0 0 2vw rgba(100,255,50,0.8);
+}
+
+#cancel-emote {
+	width:6vw;
+	height:2.5vw;
+	background:rgba(235,50,50,1);
+	outline:none;
+	text-align:center;
+	color:#fff;
+	font-size:1vw;
+	border:none;
+	line-height:1.5vw;
+	border-radius:2vw;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	transition: 0.3s;
+	margin: 0 0.3vw;
+}
+
+#cancel-emote:hover {
+	cursor:pointer;
+	background:rgba(255,50,50,1);
+	box-shadow: 0 0 2vw rgba(255,50,50,0.6);
+}
+
+
+#sex {
+	width:13vw;
+	height:3vw;
+	background:rgba(130,50,235,1);
+	outline:none;
+	position:relative;
+	text-align:center;
+	color:#fff;
+	font-size:1.2vw;
+	border:none;
+	line-height:3vw;
+	border-radius:2vw;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	transition: 0.3s;
+	margin: 0.3vw 0;
+}
+
+#sex:hover {
+	cursor:pointer;
+	transform:scale(0.95);
+	box-shadow: 0 0 2vw rgba(120,50,255,1);
+}
+
+#blowjob1 {
+	width:13vw;
+	height:3vw;
+	background:rgba(230,50,245,1);
+	outline:none;
+	position:relative;
+	text-align:center;
+	color:#fff;
+	font-size:1.2vw;
+	border:none;
+	line-height:3vw;
+	border-radius:2vw;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	transition: 0.3s;
+	margin: 0.3vw 0;
+}
+
+#blowjob1:hover {
+	cursor:pointer;
+	transform:scale(0.95);
+	box-shadow: 0 0 2vw rgba(210,0,255,1);
+}
+
+#blowjob2 {
+	width:13vw;
+	height:3vw;
+	background:rgba(255,50,120,1);
+	outline:none;
+	position:relative;
+	text-align:center;
+	color:#fff;
+	font-size:1.2vw;
+	border:none;
+	line-height:3vw;
+	border-radius:2vw;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	transition: 0.3s;
+	margin: 0.3vw 0;
+}
+
+#blowjob2:hover {
+	cursor:pointer;
+	transform:scale(0.95);
+	box-shadow: 0 0 2vw rgba(255,0,120,1);
+}
+
+#sex img, #blowjob1 img, #blowjob2 img {
+	width:2vw;
+	position:absolute;
+	left:1vw;
+	top:50%;
+	transform:translate(0,-50%);
+}
+
+
+
+::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background-color: none;
+		border: none;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 10px;
+		background-color: #101010;
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background-color: #ce0c03;
+		border: 2px solid #ce0c03);
+	}
