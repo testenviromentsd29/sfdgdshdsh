@@ -1,0 +1,390 @@
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Bold";
+  src: url("./fonts/Akrobat-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Light";
+  src: url("./fonts/Akrobat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Semibold";
+  src: url("./fonts/Akrobat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Extrabold";
+  src: url("./fonts/Akrobat-ExtraBold.otf") format("truetype");
+}
+
+
+
+
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Akrobat Bold";
+}
+
+#body {
+  height: 100vh;
+  display: none;
+  overflow: hidden;
+  /*background: url(images/logo.png), linear-gradient(5.9deg, rgba(252, 215, 8, 0.556) 0%, rgba(202, 24, 24, 0) 36.02%, rgba(26, 25, 25, 0.9) 84.1%, rgba(26, 25, 25, 0.9) 100%, rgba(128, 128, 128, 1) 100%)rgba(26, 25, 25, 0.7);
+  background-repeat: no-repeat;
+  background-size: 13vw, 100%;
+  background-position: 70vw 5vh, center center;*/
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: url(images/content-bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(0.5vw);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .bazzars-container{
+  width: 70vw;
+  height: 60vh;
+}
+
+.container .bazzars-container .header{
+  display: flex;
+  align-items: center;
+  margin-top: -4vh;
+}
+
+.container .bazzars-container .header input{
+  margin-left: 2.2vw;
+  border: none;
+  outline: none;
+	background:rgba(255,255,255,0.05);
+	border:1px solid rgba(255,255,255,0.1);
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.8vw;
+  height: 3vh;
+  margin-top: 0.8vh;
+  text-align: center;
+}
+
+.container .bazzars-container .header input.search-item{
+  margin-left: auto;
+}
+
+.container .bazzars-container .header .btn.restock{
+  height: 3vh;
+  margin-left: auto;
+  margin-right: 2.2vw;
+  width: fit-content;
+  padding: 0 1vw;
+  background:rgba(255,86,64,1);
+  box-shadow:0 0 2vw rgba(255,86,64,0.3);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .bazzars-container .title{
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .bazzars-container .title :first-child{
+  color: white;
+  font-size: 1vw;
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 0.5vw rgba(255, 255, 255, 0.5));
+}
+
+.container .bazzars-container .title :nth-child(2){
+  color: rgba(255,86,64,1);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: -0.5vh;
+}
+
+.container .bazzars-container .bazzars-flexbox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.container .bazzars-container .bazzars-list{
+  background-color: rgba(255,255,255,0.05);
+  width: 23%;
+  height: 100%;
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container .bazzars-container .bazzars-list::-webkit-scrollbar {
+  display: none;
+}
+
+.container .bazzars-container .bazzars-shop{
+  background-color: rgba(255,255,255,0.05);
+  width: 75%;
+  height: 100%;
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
+}
+
+.container .bazzars-container .bazzars-list .bazzar{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  border-bottom: 0.05vw solid rgba(255, 255, 255, 0.1);
+}
+
+.container .bazzars-container .bazzars-list .bazzar.active{
+  background-color: rgba(255,86,64,1);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+}
+
+.container .bazzars-container .bazzars-list .bazzar .bazzar-name{
+  color: white;
+  font-size: 0.9vw;
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 0.5vw rgba(255, 255, 255, 0.5));
+}
+
+.container .bazzars-container .bazzars-list .bazzar .btn-open{
+  display: flex;
+  align-items: center;
+  width: 2.5vw;
+  margin-left: auto;
+  margin-right: 2.5vw;
+  gap: 0.5vw;
+  padding: 0.5vh 0.5vw;
+  background-color: rgba(255,86,64,1);
+  color: white;
+  font-size: 0.8vw;
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  font-family: 'Akrobat';
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.container .bazzars-container .bazzars-list .bazzar.active .btn-open{
+  background-color: rgba(255, 255, 255, 0.05);
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.container .bazzars-container .bazzars-list .bazzar .btn-open i{
+  transition: 0.3s;
+}
+
+.container .bazzars-container .bazzars-list .bazzar .btn-open:hover{
+  filter: brightness(1.2) drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  cursor: pointer;
+}
+
+.container .bazzars-container .bazzars-list .bazzar .btn-open:hover i{
+  margin-left: 0.2vw;
+}
+
+.container .bazzars-container .bazzars-shop .items-list{
+  width: 100%;
+  height: 96%;
+  padding-top: 1vh;
+  padding-bottom: 0;
+  padding-left: 1vw;  
+  padding-right: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 3vw 0.75vw;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container .bazzars-container .bazzars-shop .items-list::-webkit-scrollbar {
+  display: none;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item{
+  width: 12vw;
+  min-height: 26vh;
+  height: fit-content;
+  background-color: rgba(255,255,255,0.05);
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .item-header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .item-count{
+  font-size: 0.8vw;
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: 2.0vh;
+  left: 4vw;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.2vh 0.5vw;
+  border: 0.05vw solid rgba(255, 255, 255, 0.1);
+  color: rgba(255,86,64,1);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .item-label{
+  text-align: center;
+  color: white;
+  font-family: 'Akrobat Semibold';
+  margin-top: 1vh;
+  font-size: 1vw;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .item-image{
+  width: 100%;
+  margin-top: 1vh;
+  height: 10vh;
+
+  background-image: url(images/shop-img.png);
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  filter:drop-shadow(0vw 0.4vw 0.3vw rgba(0,0,0,0.3))
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .item-price{
+  color: rgba(160,225,50,1);
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 0.5vw rgba(120,255,0,0.5));
+  margin-top: 1vh;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .controls{
+  display: flex;
+  align-items: center;
+  padding: 0.2vh 0.5vw;
+  gap: 0.2vw;
+  margin-top: 1vh;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .controls i{
+  color: white;
+  font-size: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,86,64,1);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  width: 1vw;
+  height: 1vw;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .controls input{
+  width: 4vw;
+  height: 0.9vw;
+  border: none;
+  outline: none;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn{
+  background:rgba(150,220,50,1);
+	box-shadow:0 0 2vw rgba(80,255,50,0.3);
+  color: white;
+  font-size: 0.8vw;
+  filter: drop-shadow(0 0 0.5vw rgba(80,255,50,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+  padding: 0.5vh 1vw;
+  margin-top: 1.8vh;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 5vw;
+  text-align: center;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn:hover{
+  filter: brightness(1.05) drop-shadow(0 0 0.5vw rgba(80,255,50,0.5));
+  cursor: pointer;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn:last-child{
+  margin-bottom: 1vh;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn.remove-item{
+  background:rgba(255,86,64,1);
+  box-shadow:0 0 2vw rgba(255,86,64,0.3);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn.remove-item:hover{
+  filter: brightness(1.05) drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  cursor: pointer;
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn.restock-item{
+  background:rgba(255,86,64,1);
+  box-shadow:0 0 2vw rgba(255,86,64,0.3);
+  filter: drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+}
+
+.container .bazzars-container .bazzars-shop .items-list .item .btn.restock-item:hover{
+  filter: brightness(1.05) drop-shadow(0 0 0.5vw rgba(255,86,64,0.5));
+  cursor: pointer;
+}
