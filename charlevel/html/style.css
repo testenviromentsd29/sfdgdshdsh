@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "RistrettoPro-Regular";
+  src: url('fonts/font.woff2') format('woff2'), url('fonts/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URW DIN Arabic Cond';
+  src: url('fonts/URWDINArabicCond-Black.woff2') format('woff2'),
+    url('fonts/URWDINArabicCond-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Neusa';
+  src: url('fonts/Neusa-SemiBold.woff2') format('woff2'),
+    url('fonts/Neusa-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Akrobat";
+  src: url("./fonts/Akrobat-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Bold";
+  src: url("./fonts/Akrobat-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Light";
+  src: url("./fonts/Akrobat-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Semibold";
+  src: url("./fonts/Akrobat-SemiBold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Akrobat Extrabold";
+  src: url("./fonts/Akrobat-ExtraBold.otf") format("truetype");
+}
+
+
+
+
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Akrobat Bold";
+}
+
+#body {
+  height: 100vh;
+
+  overflow: hidden;
+  /*background: url(images/logo.png), linear-gradient(5.9deg, rgba(252, 215, 8, 0.556) 0%, rgba(202, 24, 24, 0) 36.02%, rgba(26, 25, 25, 0.9) 84.1%, rgba(26, 25, 25, 0.9) 100%, rgba(128, 128, 128, 1) 100%)rgba(26, 25, 25, 0.7);
+  background-repeat: no-repeat;
+  background-size: 13vw, 100%;
+  background-position: 70vw 5vh, center center;*/
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /*background-image: url(https://cdn.discordapp.com/attachments/1154824906211598377/1156553491301539910/image.png?ex=651563e0&is=65141260&hm=4909669c8e9422cda82d07ea83f2ef2be6b6a7475d2abad8fe1e4d1623ae3887&);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+
+.container{
+  position: absolute;
+  width: 30vw;
+  height: fit-content;
+  right: -2vw;
+  top: 10vw;
+  transform: scale(0.8);
+  background:
+  linear-gradient(to right, red 1.8px 0%, transparent 1px) 0 0,
+  linear-gradient(to right, red 1.8px, transparent 1px) 0 100%,
+  linear-gradient(to left, red 1.8px, transparent 1px) 100% 0,
+  linear-gradient(to left, red 1.8px, transparent 1px) 100% 100%,
+  linear-gradient(to bottom, red 1.8px, transparent 1px) 0 0,
+  linear-gradient(to bottom, red 1.8px, transparent 1px) 100% 0,
+  linear-gradient(to top, red 1.8px, transparent 1px) 0 100%,
+  linear-gradient(to top, red 1.8px, transparent 1px) 100% 100%,
+  rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: 1.5vw 1.5vw;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, transparent 130%);
+  border: 0.05vw solid rgba(255,255,255,0.05);
+  border-bottom: 0.2vw solid rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+
+header .skew{
+  transform: skew(20deg);
+  width: 20%;
+  background-color: rgba(255,86,64,0.5);
+  padding: 0.8vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  margin-left: -3vw;
+}
+
+header .skew span{
+  font-family: "Akrobat ExtraBold";
+  color: white;
+  transform: skew(-20deg);
+  display: inline-block;
+  font-size: 1.5vw;
+}
+
+.container .player-info{
+  padding: 2vw;
+  height: fit-content;
+  display: flex;
+}
+
+.container .player-info .player-img{
+  width: 8vw;
+  height: 8vw;
+
+  background-image: url(https://cdn.discordapp.com/attachments/821445509322506281/1175004366290292736/128x128.png);
+
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.container .player-info .level-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 20vw;
+  padding-left: 2vw;
+}
+
+.container .player-info .level-info .level{
+  color: rgb(176,176,184);
+  font-size: 2.3vw;
+}
+
+.container .player-info .level-info .level #current-player-level{
+  color: white;
+  font-size: 2.9vw;
+}
+
+.container .player-info .level-info .progress-bar{
+  padding: 0.2vw;
+  background-color: rgba(255,255,255,0.1);
+  border: 0.1vw solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 0.5vw black inset;
+  height: 1.5vh;
+}
+
+.container .player-info .level-info .progress-bar .progress-bar-fill{
+  background-color: rgb(255,86,64);
+  height: 100%;
+  width: 50%;
+  filter: drop-shadow(0 0 0.2vw rgb(255,86,64));
+}
+
+.container .player-info .level-info .experience{
+  color: rgb(159,158,169);
+  font-size: 1.3vw;
+}
+
+.container .player-info .level-info .experience #current-experience{
+  color: white;
+}
+
+.container .player-info .level-info .next-reward{
+  display: flex;
+}
+
+.container .player-info .level-info .next-reward .next-reward-img{
+  width: 3vw;
+  height: 3vw;
+  background-image: url(images/pubg-logo.png);
+
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+.container .player-info .level-info .next-reward .next-reward-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.container .player-info .level-info .next-reward .next-reward-info .next{
+  color: rgba(255,255,255,0.5);
+  font-size: 1.3vw;
+}
+
+.container .player-info .level-info .next-reward .next-reward-info .next-level{
+  color: white;
+  font-size: 1.5vw;
+}
+
+.container .challenges{
+ 
+}
+
+.container .challenges .challenge{
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+}
+
+.container .challenges .challenge .info{
+  width: 100%;
+}
+
+.container .challenges .challenge .title{
+  color: rgba(255,255,255,0.5);
+  font-size: 1.3vw;
+  font-family: "Akrobat";
+}
+
+.container .challenges .challenge .progbar-info{
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.container .challenges .challenge .progbar-info .value{
+  color: white;
+  font-size: 1.2vw;
+}
+
+.container .challenges .challenge .progbar-info .progbar{
+  padding: 0.2vw;
+  background-color: rgba(255,255,255,0.1);
+  border: 0.1vw solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 0.5vw black inset;
+  height: 0.3vh;
+  flex: 0.9;
+}
+
+.container .challenges .challenge .progbar-info .progbar .progbar-fill{
+  background-color: rgb(255,86,64);
+  height: 100%;
+  width: 50%;
+  filter: drop-shadow(0 0 0.2vw rgb(255,86,64));
+}
+
+.container .challenges .challenge .reward{
+  width: 3vw;
+  height: 3vw;
+
+  background: url(images/icon-xp.png), linear-gradient(0deg, rgba(255,255,255,0.2) 0%, transparent 130%);
+  border: 0.05vw solid rgba(255,255,255,0.2);
+  border-bottom: 0.2vw solid rgba(255,255,255,0.15);
+
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+
+  display: flex;
+}
+
+.container .challenges .challenge .reward .amount{
+  color: white;
+  font-size: 1.3vw;
+  font-family: 'Akrobat Extrabold';
+  margin-left: auto;
+  margin-top: auto;
+  text-shadow: 0 0.2vw 0.2vw black;
+}

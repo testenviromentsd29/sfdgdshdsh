@@ -1,0 +1,258 @@
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+.chat-window {
+  position: absolute;
+  top: 1.5%;
+  left: 0.8%;
+  width: 38%;
+  height: 22%;
+  max-width: 1000px;
+  background-color: rgba(255,255,255, 0.0);
+  -webkit-animation-duration: 2s;
+}
+
+
+.chat-messages {
+  position: relative;
+  height: 95%;
+  font-size: 1.8vh;
+  margin: 1%;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.chat-input {
+  font-size: 1.65vh;
+  position: absolute;
+
+  top: 23.8%;
+  left: 0.8%;
+  width: 38%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.prefix {
+  font-size: 1.8vh;
+  position: absolute;
+  margin-top: 0.5%;
+  left: 0.208%;
+}
+
+textarea {
+  font-size: 1.65vh;
+  display: block;
+  box-sizing: border-box;
+  padding: 1%;
+  padding-left: 3.5%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.0);
+  width: 100%;
+  border-width: 0;
+  height: 3.15%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+  margin-bottom: 0.28%;
+}
+
+.multiline {
+  margin-left: 4%;
+  text-indent: -1.2rem;
+  white-space: pre-line;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0.5%;
+  padding-left: 1.4%;
+  font-size: 1.65vh;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.0);
+  width: 100%;
+}
+
+.help {
+  color: #b0bbbd;
+}
+
+.disabled {
+  color: #b0bbbd;
+}
+
+.suggestion {
+  margin-bottom: 0.5%;
+}
+
+.hidden {
+  display: none;
+}
+
+.weed{
+  padding: 1vw;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(https://cdn.discordapp.com/attachments/821445509322506281/1149674626734104606/0e0e79747bcb6820.png);
+  background-blend-mode: multiply;
+  background-size: 12.5vw;
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  animation: Pulse 1s infinite;
+}
+
+.weed .event-name{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 0.2vw red);
+  letter-spacing: 0.05vw;
+}
+
+.atm{
+  padding: 1vw;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(https://cdn-icons-png.flaticon.com/512/2704/2704390.png);
+  background-blend-mode: multiply;
+  background-size: 12.5vw;
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  animation: Pulse 1s infinite;
+}
+
+.atm .event-name{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 0.2vw red);
+  letter-spacing: 0.05vw;
+}
+
+.crate-drop{
+  padding: 1vw;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(https://cdn.discordapp.com/attachments/986313671720448010/1126072770883764234/pubg-loot-crate-11549536734mk9j26y6la-removebg-preview.png);
+  background-blend-mode: multiply;
+  background-size: 12.5vw;
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  animation: Pulse 1s infinite;
+}
+
+.cargo{
+  padding: 1vw;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(https://cdn.discordapp.com/attachments/986313671720448010/1126077997095604285/bunkry-i-uzbrojone-pojazdy-w-kolejnej-aktualizacji-gta-online-149578045424-removebg-preview.png);
+  background-blend-mode: multiply;
+  background-size: 2t2.5vw;
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  animation: Pulse 1s infinite;
+}
+
+.cargo .event-name{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: rgb(0, 153, 255);
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 0.2vw rgb(0, 153, 255));
+  letter-spacing: 0.05vw;
+}
+
+.crate-drop .event-name{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 0.2vw red);
+  letter-spacing: 0.05vw;
+}
+
+.event-description{
+  color: white;
+  letter-spacing: 0.05vw;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 1vw;
+  text-align: center;
+}
+
+.tournament{
+  padding: 1vw;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(https://cdn.discordapp.com/attachments/997482194278809645/1144255974010527784/6.png);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  animation: Pulse 1s infinite;
+}
+
+.tournament .event-name{
+  width: 100%;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: gold;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 0.2vw gold);
+  letter-spacing: 0.05vw;
+}
+
+@keyframes Pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
