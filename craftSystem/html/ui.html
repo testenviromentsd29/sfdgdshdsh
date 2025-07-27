@@ -1,0 +1,103 @@
+
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+		<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	</head>
+	
+	<body style="display:none;">
+	
+		<div id="wrap">
+			<div id="strain-container" >
+				
+				<div class="large-title">
+					<img src="./images/symbol.png"/>
+					<span>Create your items</span></br>
+					CRAFTING SYSTEM
+				</div>
+
+				<div id="left-side">
+					<div id="items-craft-title">ITEMS YOU CAN <span>CRAFT</span></div>
+					<!-- ITEMS YOU CAN CRAFT  -->
+					<div id="items-craft">
+						<div class="item item-active">
+							<div class="image-holder image-weapon"><img src="nui://esx_inventoryhud_matza/html/img/items/WEAPON_FOOL.png"/></div>
+							<div class="container">
+								<div class="item-name">Assault Rifle: FOOL</div>
+								<div class="craft-quantity">CRAFT AMOUNT:<br/> <span>x1</span></div>
+								<div class="quantity">
+									<input id="quantity-input" type="number" placeholder="1">
+									<!-- <div class="minus-btn btnquantity" name="button" id="minus"><i class="far fa-minus"></i></div> -->
+									<!-- <div class="number" name="name">1</div> -->
+									<!-- <div class="plus-btn btnquantity" name="button" id="plus"><i class="far fa-plus"></i></div> -->
+								</div>
+							</div>
+						</div>
+						<div onclick="selectItem()" class="item">
+							<div class="image-holder image-weapon"><img src="nui://esx_inventoryhud_matza/html/img/items/WEAPON_ISY.png"/></div>
+							<div class="container">
+								<div class="item-name">Assault Rifle: ISY</div>
+								<div class="craft-quantity">CRAFT AMOUNT:<br/> <span>x1</span></div>
+								<div class="quantity">
+									<input id="quantity-input" type="number" placeholder="1">
+									<!-- <div class="minus-btn btnquantity" name="button" id="minus"><i class="far fa-minus"></i></div> -->
+									<!-- <div class="number" name="name">1</div> -->
+									<!-- <div class="plus-btn btnquantity" name="button" id="plus"><i class="far fa-plus"></i></div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="right-side">
+					<div id="items-need-title"><span>ITEMS NEEDED</span> FOR CRAFT</div>
+					<div id="crafting-now">
+						YOU'RE ABOUT TO CRAFT: <span>FOOL</span>
+						<div id="crafting-now-img" style="background:url('nui://esx_inventoryhud_matza/html/img/items/WEAPON_HK516.png') center center"></div>
+						<button class="btn-craft"><i class="fas fa-hammer"></i> CRAFT</button>
+					</div>
+					<!-- ITEMS YOU NEED FOR CRAFT  -->
+					<div id="items-need">
+						<div class="item item-green">
+							<div class="image-holder"><img src="nui://esx_inventoryhud_matza/html/img/items/laviAR.png"/></div>
+							<div class="container">
+								<div class="item-name">Λαβή Assault Rifle</div>
+								<div class="in-armory">ITEMS NEEDED<br/> <span class="you-have-green">1</span> <span class="you-need">/ 1</span></div>
+							</div>
+						</div>
+						<div class="item item-red">
+							<div class="image-holder"><img src="nui://esx_inventoryhud_matza/html/img/items/kaniAR.png"/></div>
+							<div class="container">
+								<div class="item-name">Κάνη Assault Rifle</div>
+								<div class="in-armory">ITEMS NEEDED<br/> <span class="you-have-red">0</span> <span class="you-need">/ 1</span></div>
+							</div>
+						</div>
+						<div class="item item-red">
+							<div class="image-holder"><img src="nui://esx_inventoryhud_matza/html/img/items/kontakioAR.png"/></div>
+							<div class="container">
+								<div class="item-name">Κοντάκιο Assault Rifle</div>
+								<div class="in-armory">ITEMS NEEDED<br/> <span class="you-have-red">0</span> <span class="you-need">/ 1</span></div>
+							</div>
+						</div>
+						<div class="item item-green">
+							<div class="image-holder"><img src="nui://esx_inventoryhud_matza/html/img/items/skliro_plastiko.png"/></div>
+							<div class="container">
+								<div class="item-name">Σκληρό Πλαστικό</div>
+								<div class="in-armory">ITEMS NEEDED<br/> <span class="you-have-green">5</span> <span class="you-need">/ 5</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="script.js" type="text/javascript"></script>
+		<script src="debounce.min.js" type="text/javascript"></script>
+	
+	</body>
+	</html>

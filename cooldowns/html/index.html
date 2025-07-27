@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/hover.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="wrap" style="display:none">
+		<div id="strain-content">
+			<div class="large-title"><span>GREEK MAFIA</span> COOLDOWNS</div>
+			<img class="bot-element" src="./images/element.png"/>
+			
+			<div id="side-menu">
+				<button kind="cargo" class="side-btn side-pvp side-btn-active"><i class="fas fa-truck-moving"></i> Cargo  Cooldowns</button>
+				<button kind="crate" class="side-btn side-usefull"><i class="fas fa-parachute-box"></i> Crate Cooldowns</button>
+				<button kind="robbery" class="side-btn side-makeit"><i class="fas fa-sack-dollar"></i> Robbery Cooldowns</button>
+			</div>
+			
+			<!-- CARGO COOLDOWNS -->
+			<div id="cargo-cooldowns" class="right-side">
+				<!-- AVAILABLE COOLDOWNS -->
+				<div class="available-cooldowns">
+					<div class="cooldown-item">
+						<div class="ribbon">
+							  <p>AVAILABLE</p>
+							  <span><svg x="0px" y="0px" viewBox="0 0 100 100"><path fill="#324e11" d="M92.5,84.3V98c4.7,0,5.5-2.1,5.5-2.1L92.5,84.3z"></path><path fill="#324e11" d="M3.7,1.7c0,0-2.4,0.4-2.4,5.1H15L3.7,1.7z"></path><polygon fill="#78be28" points="44.1,1.7 98,55.5 98,95.9 3.7,1.7 "></polygon></svg></span>
+							</div>
+						<div class="cooldown-item-img"><img src="https://www.gtabase.com/images/jch-optimize/ng/images_gta-5_vehicles_emergency_main_police-riot.webp"/></div>
+						<div class="cooldown-item-name">
+							Police Cargo<br/>
+							<span class="cooldown-item-available">Cargo is Available</span><br/>
+							<button class="cooldown-item-gps"><i class="fas fa-map-marker-alt"></i> GPS LOCATION</button>
+						</div>
+					</div>
+				</div>
+				
+				<!-- UNAVAILABLE COOLDOWNS -->
+				<div class="unavailable-cooldowns">
+					<div class="cooldown-item">
+						<div class="cooldown-item-img"><img src="https://www.gtabase.com/images/jch-optimize/ng/images_gta-5_vehicles_helicopters_main_akula.webp"/></div>
+						<div class="cooldown-item-name">
+							Helicopter Cargo<br/>
+							<span class="cooldown">Available in - <span>8 hours 26 minutes</span></span><br/>
+							<button class="cooldown-item-gps"><i class="fas fa-map-marker-alt"></i> GPS LOCATION</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="script.js" type="text/javascript"></script>
+</body>
+</html>
