@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/hover.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="wrap" style="display:none;">
+			<div id="strain-content">
+				<div class="large-title"><span>GREEK MAFIA</span> COMMANDS</div>
+				
+				<div id="side-menu">
+					<button onclick="ChangePage('pvpCommands')" class="side-btn side-pvp"><i class="fas fa-swords"></i> PVP Commands</button>
+					<button onclick="ChangePage('usefullCommands')" class="side-btn side-usefull"><i class="fas fa-comment-alt-exclamation"></i> Usefull Commands</button>
+					<button onclick="ChangePage('makeItCommands')" class="side-btn side-makeit"><i class="fas fa-fire-alt"></i> Make it yours Commands</button>
+					<button onclick="ChangePage('uiCommands')" class="side-btn side-ui side-btn-active"><i class="fal fa-desktop-alt"></i> UI Commands</button>
+					<button onclick="ChangePage('gameplayCommands')" class="side-btn side-gameplay"><i class="fas fa-gamepad-alt"></i> Gameplay Commands</button>
+				</div>
+				
+				<!-- UI COMMANDS -->
+				<div id="pvp-commands" class="right-side">
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('restock')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/restock</span><br/>
+							Μπορείς να κάνεις restock με τα πράγματα από το personal armory σου.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('hidekingstatus')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/hidekingstatus</span><br/>
+							Εαν κερδίσεις το cityKing event  μπορείς να κρύψεις το μήνυμα πάνω από το κεφάλι σου.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('stats')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/stats</span><br/>
+							Βλέπεις την εμπειρία σου σε διάφορα πράγματα όσο γίνεσαι καλύτερος.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('fight')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/fight</span><br/>
+							Μπορείς να παίξεις 1 vs 1 fight διαλέγοντας αρένα όπου κι αν είσαι.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('ghettotag')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/ghettotag</span><br/>
+							Μπορείς να κρύψεις πάνω από το κεφάλι σου, αν έχεις κερδίσει στο ghettoevent.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('drone')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/drone</span><br/>
+							Μπορείς να ανοίξεις το drone που έχεις αγοράσει από hackerjob.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('hideranks')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/hideranks</span><br/>
+							Μπορείς να κρύψεις πάνω από το κεφάλι σου το rank σου στο mafia league.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('jobwear')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/jobwear</span><br/>
+							Μπορείς να φορέσεις τα ρούχα της μαφίας σου αν υπάρχει κάποιος δίπλα σου με το ίδιο criminaljob.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('cooldowns')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/cooldowns</span><br/>
+							Μπορείς να δεις όλα τα cargo του server τι cooldown έχουν.
+						</div>
+					</div>
+				</div>
+
+				<div id="usefull-commands" class="right-side" style="display: none;">
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('hidemotels')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/hidemotels</span><br/>
+							Μπορείς να ενεργοποιήσεις ή να απενεργοποιήσεις αντίστοιχα τα blip στον χάρτη των motels.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('hideapartments')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/hideapartments</span><br/>
+							Μπορείς να ενεργοποιήσεις ή να απενεργοποιήσεις αντίστοιχα τα blip στον χάρτη των aparments.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('flip')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/flip</span><br/>
+							Τούμπαρες με το όχημα σου και έχεις κολλήσει εκεί; Ξεκόλλησες με το command.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('myarmory')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/myarmory</span><br/>
+							Μπορείς να δεις τα personal armories που βρίσκονται στον χάρτη σου.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('openfps')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/openfps</span><br/>
+							Μπορείς να δώσεις ένα boost στα fps.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('home')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/home</span><br/>
+							Μπορείς να κρύψεις τα σπίτια από το μεσιτικό.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('checkstock')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/checkstock</span><br/>
+							Μπορείς να τσεκάρεις το stock του αυτόματου πωλητή σου.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('vipexpire')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/vipexpire</span><br/>
+							Μπορείς να δεις όλα σου τα vip πότε λήγουν. Summervip, Ghettovip. level3level2vip.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('teleport')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/teleport</span><br/>
+							Αν έχεις level3vip μπορείς να κάνεις teleport σε κάποιες συγκεκριμένες περιοχές.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('armoryrequests')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/armoryrequests</span><br/>
+							Πλέον όποιος θέλει να πάρει πράγματα το personal armory σας , θα κάνει request και θα πρέπει να το δεχθείτε για να πάρει πράγματα.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('findmybazaar')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/findmybazaar</span><br/>
+							Αν έχετε πρώτο job θα σας βάλει gps που είναι το bazaar.
+						</div>
+					</div>
+				</div>
+
+				<div id="makeIt-commands" class="right-side" style="display: none;">
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('showrevive')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/showrevive</span><br/>
+							βλέπετε που έχει revive npc
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('shooting')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/shooting</span><br/>
+							σετάρεις το damage όπως θέλεις να φαίνεται
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('erp')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/erp</span><br/>
+							Μπορείς να παίξεις ιδιαίτερο rp με άτομα που το θέλουν.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('chat')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/chat</span><br/>
+							Μπορείς να ενεργοποιήσεις ή να απενεργοποιήσεις αντίστοιχα όποια chat θέλεις.
+						</div>
+					</div>
+				</div>
+
+				<div id="ui-commands" class="right-side" style="display: none;">
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('toggleui')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/toggleui</span><br/>
+							Μπορείς να φτιάξεις το hud σου όπως θες. 
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('crosshair')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/crosshair</span><br/>
+							Μπορείς να φτιάξεις το crosshair σου όπως θέλεις.
+						</div>
+					</div>
+				</div>
+
+				<div id="gamePlay-commands" class="right-side" style="display: none;">
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('openboatgarage')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/openboatgarage</span><br/>
+							για να μπορείτε να βγάλετε τις βάρκες.
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('openpolicegarage')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/openpolicegarage</span><br/>
+							όσοι αστυνόμοι έχουν vip μπορούν να ανοίξουν το αστυνομικό τους γκαραζ, σαν το opengarage. 
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('openheligarage')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/openheligarage</span><br/>
+							ανοιγει το garage με τα ελικοπτερα αν είστε κάτοχοί των vip
+						</div>
+					</div>
+					
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('taxi')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/taxi</span><br/>
+							Μπορείς να καλέσεις ταξί όπου κι αν βρίσκεσαι και έχεις ξεμεινει από όχημα.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('repair')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/repair</span><br/>
+							Ξέμεινες στην μέση του πουθενά μπορείς να φτιάξεις το όχημα σου ανά πάσα στιγμή.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('changetime')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/changetime</span><br/>
+							Μπορείς να αλλάξεις την ώρα , για να είναι νύχτα ή ημέρα αντίστοιχα.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('changeweather')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/changeweather</span><br/>
+							Μπορείς να αλλάξεις τον καιρό συμφωνά με τα γούστα σου.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('opengarage')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/opengarage</span><br/>
+							Μπορείς να ανοίξεις όπου κι αν είσαι το garage σου αν έχεις level3 vip.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('emotes')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/emotes</span><br/>
+							Μπορείς να βρεις διάφορα emotes για να εμπλουτίσεις το rp σου.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('documents')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/documents</span><br/>
+							Να μπορείς να χρησιμοποίησεις όλα τα αρχεία για να εμπλουτίσεις το rp σου.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('pet')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/pet</span><br/>
+							Μπορείς να βγάλεις το pet που έχεις αγοράσει από το petshop.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('changejobcenter')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/changejobcenter</span><br/>
+							Μπορείς να βγάλεις το pet που έχεις αγοράσει από το petshop.
+						</div>
+					</div>
+
+					<div class="command-item">
+						<div class="command-icon"><i class="fal fa-desktop-alt"></i><button onclick="justclick('c_peds')" class="use-command">USE</button></div>
+						<div class="command-desc">
+							<span>/c_peds</span><br/>
+							Μπορείτε να διαλέξετε να παίξετε με κάποιο custom ped.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js" type="text/javascript"></script>
+	</body>
+</html>

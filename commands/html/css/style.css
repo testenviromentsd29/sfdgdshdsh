@@ -1,0 +1,148 @@
+* {
+	box-sizing:unset;
+}
+
+html {
+	font-family:Bebas Nue;
+	/* background:transparent; */
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+}
+
+body {
+	/* background:  url('https://i.imgur.com/S4N7ZjQ.png') bottom center no-repeat; */
+	background:transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+	width: 100%;
+	height:100%;
+}
+
+#wrap {
+	background:  url('../images/background.png') bottom center no-repeat;
+	background-size: cover;
+	font-family: 'Helvetica';
+	left:0;
+	top:0;
+	width: 100%;
+	height:100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	overflow: hidden;
+	display:block;
+}
+
+
+#strain-content {
+	background:radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,0.05),transparent),  rgba(15,15,15,0.5);
+	background-size: cover;
+	position: absolute;
+	font-family: 'Helvetica';
+	width: 68vw;
+	height: 33vw;
+	padding:1vw;
+	color: rgba(255, 255, 255, 1);
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	border-radius:0.5vw;
+}
+
+
+.large-title {
+	width:100%;
+	height:3.5vw;
+	position:absolute;
+	top:-2vw;
+	left:50%;
+	transform:translate(-50%,0);
+	font-size:2.5vw;
+	letter-spacing:0.1vw;
+	text-align:center;
+	color: rgba(255,255,255,1);
+    font-weight: 300;
+	text-shadow: 0 0 1.2vw rgba(255,255,255,0.5);
+}
+.large-title span {font-weight:600;color: rgba(255,210,50,1);text-shadow: 0 0 1.2vw rgba(255,145,45,0.5);}
+
+
+#side-menu {
+	width:15vw;
+	height:32vw;
+	position:relative;
+	float:left;
+	margin:0.5vw 0 0 0.5vw;
+	border-right:0.05vw solid rgba(255,255,255,0.1);
+	/* text-align:center; */
+}
+
+.right-side {
+	width:51.5vw;
+	height:32vw;
+	position:relative;
+	float:left;
+	margin:0.5vw 0 0 0.5vw;
+	overflow-y:scroll;
+}
+
+.side-btn {
+	background:linear-gradient(45deg, rgba(255,145,50,0.1) 0%, transparent 100%);
+	width:11vw;
+	height:3vw;
+	margin:0.2vw 0;
+	color:rgba(255,255,255,1);
+	border:0.05vw solid rgba(255,255,255,0.05);
+	outline:none;
+	font-family:'Helvetica';
+	font-size:0.7vw;
+	cursor:pointer;
+	transition:0.3s;
+	text-align:left;
+	padding-left:2.5vw;
+	margin-left:0.3vw;
+	position:relative;
+	border-radius:0.1vw;
+}
+
+.side-btn:hover, .side-btn-active {color:rgba(255,210,50,1);background:linear-gradient(45deg, rgba(255,145,50,0.1) 0%, transparent 100%);border:0.05vw solid rgba(255,210,50,0.5);filter:drop-shadow(0 0 1.5vw rgba(255,125,35,0.5));}
+.side-btn i {position:absolute;top:50%;left:0.7vw;font-size:0.9vw;color:rgba(255,210,50,1);transform:translate(0,-50%);padding-right:0.5vw;border-right:0.05vw solid rgba(255,255,255,0.1);}
+
+
+.command-item {
+	background:linear-gradient(45deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+	border-radius:0.1vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	width:15.7vw;
+	height:4vw;
+	margin:0 0.3vw 0.3vw 0;
+	padding:0.5vw;
+	float:left;
+}
+
+.command-icon {float:left;width:3vw;height:3vw;line-height:1vw;padding-top:0.8vw;;border-radius:0.2vw;font-size:1.5vw;text-align:center;color:rgba(255,210,50,1);text-shadow: 0 0 1.2vw rgba(255,145,45,0.5);}
+
+.use-command {background: rgba(215,155,25,1);width:2.5vw;height:1vw;color:rgba(255,255,255,1);font-size:0.5vw;border:none;outline:none;transition:0.3s;margin-top:0.5vw;cursor:pointer;border-radius:0.1vw;}
+.use-command:hover {background: rgba(255,200,45,1);box-shadow:0 0 1vw rgba(255,150,50,0.6);}
+
+.command-desc {
+	width:11.5vw;
+	height:4vw;
+	margin:0 auto;
+	position:relative;
+	font-size:0.55vw;
+	line-height:0.9vw;
+	border-left:0.05vw solid rgba(255,255,255,0.1);
+	margin-left:0.4vw;
+	padding-left:0.4vw;
+	float:left;
+}
+.command-desc span {font-size:0.8vw;position:relative;color:rgba(255,210,50,1);text-shadow: 0 0 1.2vw rgba(255,140,50,0.5);}
+
+::selection {background: rgba(255,35,35,0.2);}
+::-webkit-scrollbar-track {background: transparent;border: none;border-radius:0.5vw;}
+::-webkit-scrollbar {width: 0.2vw;height: 0.4vw;background-color: transparent;border-radius:0.5vw;}
+::-webkit-scrollbar-thumb {background: rgba(255,255,255,0.1);border-radius:0.5vw;}
