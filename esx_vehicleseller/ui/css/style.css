@@ -1,0 +1,475 @@
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	background:  url('../images/background.png') center center no-repeat fixed;
+    /* background: transparent; */
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+#wrap {
+    background: url('../images/car-bg.png') center center no-repeat;
+	background-size:cover;
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width: 65vw;
+	height:40vw;
+	color: rgba(255, 255, 255, 1);
+	top: 50%;
+	left:50%;
+    transform: translate(-50%, -50%);
+	overflow:hidden;
+	display:block;
+	z-index:2;
+	filter:drop-shadow(0 0 7vw rgba(255,70,50,0.7));
+}
+
+
+#side-menu {
+	width:15vw;
+	float:right;
+}
+
+
+#strain-content {
+	float:right;
+	margin-top:8vw;
+	margin-right:2vw;
+}
+
+
+/* == LEFT SIDE == */
+
+#model-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:18vw;
+	height:6.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+}
+
+#owner-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:18vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+}
+
+#tank-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-right:0.5vw;
+}
+
+#insurance-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-left:0.5vw;
+}
+
+#turbo-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-right:0.5vw;
+}
+
+#dollar-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-left:0.5vw;
+}
+
+#black-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-left:0.5vw;
+}
+
+#donation-block {
+	background:rgba(255,255,255,0.1);
+	padding:1vw;
+	width:8.5vw;
+	height:4.5vw;
+	border:0.05vw solid rgba(255,255,255,0.1);
+	float:left;
+	margin-bottom:1vw;
+	margin-left:0.5vw;
+}
+
+#dollar-price {
+	font-size:1.5vw;
+	font-weight:400;
+	color:rgba(160,255,50,1);
+	text-shadow: 0 0 1vw rgba(125,255,50,1);
+}
+
+#black-price {
+	font-size:1.5vw;
+	font-weight:400;
+	color:rgba(255,60,60,1);
+	text-shadow: 0 0 1vw rgba(255,0,0,1);
+}
+
+#donation-price {
+	font-size:1.5vw;
+	font-weight:400;
+	color:rgba(255,220,50,1);
+	text-shadow: 0 0 1vw rgba(255,160,0,1);
+}
+
+#btn-buy {
+	background:rgba(140,205,40,1);
+	border-radius:2vw;
+	width:18vw;
+	height:3vw;
+	border:none;
+	color:#fff;
+	font-size:1.3vw;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+#btn-buy:hover {
+	transform:scale(0.95);
+	background:rgba(180,255,50,1);
+	color:rgba(0,0,0,1);
+	box-shadow: 0 0 1vw rgba(160,255,50,0.5);
+}
+
+#btn-sell {
+	background:rgba(225,50,50,1);
+	border-radius:2vw;
+	width:18vw;
+	height:3vw;
+	border:none;
+	color:#fff;
+	font-size:1.3vw;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+#btn-sell:hover {
+	transform:scale(0.95);
+	background:rgba(255,50,50,1);
+	box-shadow: 0 0 1vw rgba(255,50,50,0.8);
+}
+
+#btn-test {
+	background:rgb(224, 221, 16);
+	border-radius:2vw;
+	width:18vw;
+	height:3vw;
+	border:none;
+	color:#fff;
+	font-size:1.3vw;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+#btn-test:hover {
+	transform:scale(0.95);
+	background:rgb(224, 221, 16);
+	color:rgba(0,0,0,1);
+	box-shadow: 0 0 1vw rgba(224, 221, 16, 0.5);
+}
+
+#title {
+	font-size:0.8vw;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+	line-height:0.8vw;
+}
+
+#vehicle-model {
+	font-size:1.2vw;
+	color:rgba(255,220,50,1);
+	text-shadow: 0 0 1vw rgba(255,150,50,1);
+	font-weight:400;
+}
+
+#plate {
+	background:url('../images/plate-bg.png') top left no-repeat;
+	background-size:cover;
+	width:11.7vw;
+	height:2.5vw;
+	font-size:1.4vw;
+	line-height:2.5vw;
+	color:#000;
+	text-align:left;
+	font-weight:400;
+	padding-left:2vw;
+}
+
+#vehicle-owner {
+	font-size:1.4vw;
+	color:rgba(255,220,50,1);
+	text-shadow: 0 0 1vw rgba(255,190,50,1);
+	font-weight:400;
+}
+
+#tank-capacity {
+	font-size:1.4vw;
+	color:rgba(150,255,50,1);
+	text-shadow: 0 0 1vw rgba(150,255,50,1);
+	font-weight:400;
+}
+
+#insurance {
+	font-size:1.4vw;
+	color:rgba(255,50,50,1);
+	text-shadow: 0 0 1vw rgba(255,50,50,1);
+	font-weight:400;
+}
+
+
+#turbo-active {
+	font-size:1.4vw;
+	color:rgba(150,255,60,1);
+	text-shadow: 0 0 1vw rgba(150,255,60,1);
+	font-weight:400;
+}
+
+#turbo-inactive {
+	font-size:1.4vw;
+	color:rgba(255,60,60,1);
+	text-shadow: 0 0 1vw rgba(255,0,0,1);
+	font-weight:400;
+}
+
+
+/* == RIGHT SIDE == */
+
+
+#engine-block {
+	background:url('../images/engine-bg.png') right bottom, rgba(20,20,20,0.5);
+	background-size:cover;
+	padding:1vw;
+	width:11vw;
+	height:10vw;
+	border:0.05vw solid rgba(150,100,255,0.5);
+	margin-bottom:3vw;
+	margin-top:-3.5vw;
+	margin-left:0.5vw;
+	float:left;
+}
+
+#brakes-block {
+	background:url('../images/brakes-bg.png') right bottom, rgba(20,20,20,0.5);
+	background-size:cover;
+	padding:1vw;
+	width:11vw;
+	height:10vw;
+	border:0.05vw solid rgba(255,200,50,0.4);
+	margin-bottom:3vw;
+	margin-top:-3.5vw;
+	margin-left:0.5vw;
+	float:left;
+}
+
+#suspension-block {
+	background:url('../images/suspension-bg.png') right bottom, rgba(20,20,20,0.5);
+	background-size:cover;
+	padding:1vw;
+	width:11vw;
+	height:10vw;
+	border:0.05vw solid rgba(50,255,100,0.3);
+	margin-bottom:0.5vw;
+	margin-left:0.5vw;
+	float:left;
+}
+
+#transmission-block {
+	background:url('../images/transmission-bg.png') right bottom, rgba(20,20,20,0.5);
+	background-size:cover;
+	padding:1vw;
+	width:11vw;
+	height:10vw;
+	border:0.05vw solid rgba(255,50,50,0.5);
+	margin-bottom:0.5vw;
+	margin-left:0.5vw;
+	float:left;
+}
+
+#engine-level {
+	font-size:1.2vw;
+	font-weight:400;
+	color:#9a5bff;
+	text-shadow: 0 0 25px #6f17fd;
+}
+
+#brakes-level {
+	font-size:1.2vw;
+	font-weight:400;
+	color:#ffdb28;
+	text-shadow: 0 0 25px #fd8c17;
+}
+
+#suspension-level {
+	font-size:1.2vw;
+	font-weight:400;
+	color:#17fd73;
+	text-shadow: 0 0 25px #17fdb3;
+}
+
+#transmission-level {
+	font-size:1.2vw;
+	font-weight:400;
+	color:#ff3228;
+	text-shadow: 0 0 25px #fd1717;
+}
+
+.max {
+	animation:tada 1s infinite!important;
+}
+
+#engine-state {
+	font-size:1vw;
+	font-weight:300;
+	margin-top:8vw;
+	margin-right:8vw;
+}
+
+#levelbar {
+  width: 5vw;
+  height: 5vw;
+  margin-top:1vw;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+  fill: none;
+  stroke: rgba(170,255,50,1);
+  filter:drop-shadow(0 0 0.5vw rgba(125,255,0,0.7));
+  stroke-width: 10;
+}
+
+#level {
+	font-size:1vw;
+	font-weight:400;
+	letter-spacing:0.03vw;
+	text-align:center;
+	color:#fff;
+}
+
+
+
+
+	::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background: rgba(255,255,255,0);
+		border: none;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 0.2vw;
+		background-color: transparent;
+		border-radius:0.4vw;
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background: rgba(255,200,40,1);
+		border: 0.1vw solid rgba(255,200,40,1);
+		border-radius:0.5vw;
+	}
