@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/hover.css">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	
+	
+		
+	<!-- home -->
+	<div id="wrap" style="display:none;">	
+		<div id="dispenser"></div>
+		<div id="left">
+			<div id="gas-station">GAS STATION</div>
+			<div id="station-name">GAZPROM</div>
+			<div id="gas-owner">OWNER</div>
+			<div id="station-owner">STRAIN KAPPACCINO</div>
+			<table id="pricetable">
+				<tr>
+					<td class="ptext"><div id="liter-price-text">PRICE PER LITER:</div></td>
+					<td class="pprice"><div id="station-price-litre" data-liter-price="5">$5</div></td>
+				</tr>
+			</table>
+			<table id="pricetable">
+				<tr>
+					<td class="ptext"><div id="canister-price-text">PRICE PER CANISTER:</div></td>
+					<td class="pprice"><div id="station-price-canister" data-canister-price="295">$295</div></td>
+				</tr>
+			</table>
+			<table id="pricetable">
+				<tr>
+					<td class="ptext"><div id="repair-price-text">PRICE PER REPAIR KIT:</div></td>
+					<td class="pprice"><div id="station-price-repair" data-repair-price="100">$100</div></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="right">		
+			<div id="inputs-content">
+				<span id="gasoline-title"><i class="fad fa-burn"></i> GASOLINE</span>
+				<span id="gasoline-price">$0</span>
+				<div id="gasoline-input">
+					<button id="decrease-btn-liter" class="small-button-minus"><i class="fas fa-minus"></i></button>
+					<input type="number" id="quantity-liter" class="text-input" value="0" max = 100>
+					<button id="increase-btn-liter" class="small-button-plus2"><i class="fas fa-plus"></i></button>
+					<button id="max-btn-liter" class="small-button-max">MAX</button>
+				</div>
+				
+				<span id="premium-fuel-title"><i class="fad fa-star"></i> PREMIUM FUEL</span>
+				<div id="premium-fuel-input">
+					<button id="btn-buy-premium" onclick='BuyPremium()' class="buy-button">BUY</button>
+					<button id="btn-sell-premium" onclick='SellPremium()' class="sell-button">SELL</button>
+				</div>
+				
+				<span id="repair-title"><i class="fad fa-toolbox"></i> REPAIR KIT</span>
+				<span id="repair-price">$0</span>
+				<div id="repair-input" max="1">
+					<button id="decrease-btn-repair" class="small-button-minus"><i class="fas fa-minus"></i></button>
+					<input type="number" id="quantity-repair" class="text-input-big" value="0">
+					<button id="increase-btn-repair" class="small-button-plus"><i class="fas fa-plus"></i></button>
+				</div>
+				
+				
+				<span id="canister-title"><i class="fad fa-gas-pump"></i> CANISTER</span>
+				<span id="canister-price">$0</span>
+				<div id="canister-input">
+					<button id="decrease-btn-canister" class="small-button-minus"><i class="fas fa-minus"></i></button>
+					<input type="number" id="quantity-canister" class="text-input-big" value="0">
+					<button id="increase-btn-canister" class="small-button-plus"><i class="fas fa-plus"></i></button>
+				</div>
+			</div>
+
+
+			<div id="buttons-content">
+				<span id="overall-title">TOTAL:</span><br/>
+				<span id="total-price">$0</span><br/>
+				<button id="place-order" onclick='PlaceOrder()'>PLACE AN ORDER</button>
+				<div id="controlled">CONTROLS: <span id="station-controlled">STRAIN CARTEL</span></div>
+			</div>
+			
+			<!-- OWNER PANEL -->
+			<div id="owner-panel-block" style="display:none">
+				<center><div id="owner-title">OWNER PANEL</div></center>
+				
+				<div id="small-title"><i class="fas fa-gas-pump"></i> SET GASOLINE PRICE</div>
+				<input type="number" id="owner-gasoline-price" class="strain-input-small" value="0">
+				<button id="confirm-gasoline" class="owner-small-button-plus" onclick='SetPriceGasoline()'><i class="fas fa-check"></i></button>
+				
+				
+				<div id="small-title"><i class="fas fa-jug"></i> SET CANISTER PRICE</div>
+				<input type="number" id="owner-canister-price" class="strain-input-small" value="0">
+				<button id="confirm-canister" class="owner-small-button-plus" onclick='SetPriceCanister()'><i class="fas fa-check"></i></button>
+				
+				
+				<div id="small-title"><i class="fas fa-toolbox"></i> SET REPAIR KIT PRICE</div>
+				<input type="number" id="owner-repair-kit-price" class="strain-input-small" value="0">
+				<button id="confirm-repair-kit" class="owner-small-button-plus" onclick='SetPriceRepairKit()'><i class="fas fa-check"></i></button>
+
+				<div id="tanker-capacity">TANKER CAPACITY:<br/><span id = "tanker-capacity-amount">6418 / 10000 lt</span></div>
+				<button id="refuel-station" onclick='RefillStation()'><i class="fas fa-truck-moving"></i> REFUEL STATION</button>
+			</div>
+			
+		</div>
+		
+    </div>
+	
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="./strain.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

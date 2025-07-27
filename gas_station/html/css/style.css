@@ -1,0 +1,712 @@
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background:  url('https://i.imgur.com/xoMFic7.png') bottom center no-repeat;
+    background: transparent;
+	background-size: cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+
+
+#wrap {
+	background: url('../images/background.png') bottom center no-repeat;
+	background-size:cover;
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width: 100%;
+	height:100%;
+	color: rgba(255, 255, 255, 1);
+	top: 50%;
+	left:50%;
+    transform: translate(-50%, -50%);
+	overflow:hidden;
+	display:flex;
+}
+
+/* -- BACKGROUNDS -- */
+
+#left {
+	background:url('../images/left.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	padding:9vw 2vw;
+	width:17.7vw;
+	height:36vw;
+	top:50%;
+	left:17%;
+	position:relative;
+	color:rgba(255,255,255,1);
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	transform:translate(0,-50%);
+}
+
+#right {
+	background:url('../images/right.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	padding:3vw 3vw;
+	width:48vw;
+	height:36vw;
+	top:52%;
+	left:15%;
+	position:relative;
+	color:rgba(255,255,255,1);
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	transform:translate(0,-50%);
+}
+
+#dispenser {
+	background:url('../images/gas-dispenser.png') top center no-repeat;
+	background-size:cover;
+	width:37vw;
+	height:21vw;
+	transition:0.4s;
+	position:absolute;
+	left:0;
+	bottom:2vw;
+	z-index:99;
+}
+
+/* -- LEFT SIDE -- */
+#gas-station {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,225,30,1);
+	letter-spacing:0.15vw;
+}
+
+#station-name {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	margin:0.4vw 0;
+	color:rgba(255,255,255,1);
+}
+
+#gas-owner {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,255,255,0.5);
+	letter-spacing:0.15vw;
+	margin-top:1vw;
+}
+
+#station-owner {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	margin:0.4vw 0;
+	color:rgba(255,255,255,1);
+	margin-bottom:1vw;
+}
+
+#pricetable {
+	width:100%;
+	margin:0.5vw 0.5vw;
+}
+
+table td.ptext, td.ptext {
+	width:50%;
+	padding:0.5vw;
+}
+
+#liter-price-text {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,255,255,0.5);
+	letter-spacing:0.15vw;
+	text-align:right;
+}
+
+#station-price-litre {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+}
+
+#canister-price-text {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,255,255,0.5);
+	letter-spacing:0.15vw;
+	text-align:right;
+}
+
+#station-price-canister {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+}
+
+#repair-price-text {
+	font-size:0.9vw;
+	line-height:0.9vw;
+	color:rgba(255,255,255,0.5);
+	letter-spacing:0.15vw;
+	text-align:right;
+}
+
+#station-price-repair {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+}
+
+/* -- RIGHT SIDE -- */
+
+#inputs-content {
+	width:45%;
+	height:100%;
+	float:left;
+	padding:3vw 1.5vw;
+	opacity:1;
+	text-align:left;
+}
+
+#gasoline-title {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	float:left;
+}
+
+#gasoline-price {
+	font-size:1.2vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	float:right;
+}
+
+#gasoline-input {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	margin-top:0.5vw;
+	margin-bottom:2vw;
+	border-radius:0.4vw;
+	color:rgba(255,255,255,1);
+	float:left;
+}
+
+#premium-fuel-title {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	float:left;
+}
+
+#premium-fuel-price {
+	font-size:1.2vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	float:right;
+}
+
+#premium-fuel-input {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	margin-top:0.5vw;
+	margin-bottom:2vw;
+	border-radius:0.4vw;
+	color:rgba(255,255,255,1);
+	float:left;
+}
+
+#repair-title {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	float:left;
+}
+
+#repair-price {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	color:rgba(255,255,255,1);
+	float:right;
+}
+
+#repair-input {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	margin-top:0.5vw;
+	margin-bottom:2vw;
+	border-radius:0.4vw;
+	color:rgba(255,255,255,1);
+	float:left;
+}
+
+#canister-title {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	float:left;
+}
+
+#canister-price {
+	font-size:1.2vw;
+	line-height:1.2vw;
+	color:rgba(255,255,255,1);
+	float:right;
+}
+
+#canister-input {
+	background:rgba(0,0,0,0.4);
+	width:100%;
+	margin-top:0.5vw;
+	margin-bottom:2vw;
+	border-radius:0.4vw;
+	color:rgba(255,255,255,1);
+	float:left;
+}
+
+/* -- PLACE ORDER -- */
+
+#buttons-content {
+	width:55%;
+	height:100%;
+	float:left;
+	padding:3vw 0.5vw;
+	opacity:1;
+	text-align:left;
+}
+
+#overall-title {
+	font-size:1.8vw;
+	line-height:1.8vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+}
+
+#total-price {
+	font-size:2.5vw;
+	line-height:3.5vw;
+	font-weight:600;
+	color:rgba(255,225,30,1);
+	text-shadow:0 0 1.5vw rgba(155,125,15,1);
+	text-align:left;
+}
+
+#controlled {
+	max-width:45%;
+	background:rgba(255,255,255,0.2);
+	font-size:1.2vw;
+	line-height:1.4vw;
+	padding:1vw 1.5vw;
+	letter-spacing:0.1vw;
+	color:rgba(255,255,255,1);
+	border-radius:0.4vw;
+	position:absolute;
+	bottom:6vw;
+}
+
+#station-controlled {
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,180,0,1);
+}
+
+
+/* -- STRAIN BUTTON DESIN -- */
+
+.text-input-big {
+	background:transparent;
+	color:rgba(255,255,255,1);
+	width:64%;
+	height:2.8vw;
+	font-size:1.2vw;
+	line-height:1vw;
+	padding:0 1vw;
+	text-align:center;
+	border:none;
+	outline:none;
+	vertical-align: top;
+	border-radius:0vw;
+}
+
+.text-input {
+	background:transparent;
+	color:rgba(255,255,255,1);
+	width:41.5%;
+	height:2.8vw;
+	font-size:1.2vw;
+	line-height:1vw;
+	padding:0 1vw;
+	text-align:center;
+	border:none;
+	outline:none;
+	vertical-align: top;
+	border-radius:0vw;
+}
+
+.strain-input {
+	background:transparent;
+	color:rgba(255,255,255,1);
+	width:41.5%;
+	height:2.8vw;
+	font-size:1.2vw;
+	line-height:1vw;
+	padding:0 1vw;
+	text-align:center;
+	border:none;
+	outline:none;
+	vertical-align: top;
+	border-radius:0vw;
+}
+
+
+.small-button-minus {
+	width:2.8vw;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	border-top-left-radius:0.3vw;
+	border-bottom-left-radius:0.3vw;
+	float:left;
+	
+}
+
+.small-button-minus:hover {
+	background:rgba(255,70,70,1);
+	box-shadow: 0 0 1.5vw rgba(255,70,70,0.4);
+}
+
+.small-button-plus {
+	width:2.8vw;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	border-top-right-radius:0.4vw;
+	border-bottom-right-radius:0.4vw;
+	float:right;
+}
+
+.small-button-plus:hover {
+	background:rgba(65,235,70,1);
+	box-shadow: 0 0 1.5vw rgba(65,235,70,0.8);
+}
+
+.small-button-plus2 {
+	width:2.8vw;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+}
+
+.small-button-plus2:hover {
+	background:rgba(65,235,70,1);
+	box-shadow: 0 0 1.5vw rgba(65,235,70,0.8);
+}
+
+.small-button-max {
+	width:22%;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:1vw;
+	line-height:1vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	border-top-right-radius:0.3vw;
+	border-bottom-right-radius:0.3vw;
+	float:right;
+	
+}
+
+.small-button-max:hover {
+	background:rgba(255,70,70,1);
+	box-shadow: 0 0 1.5vw rgba(255,70,70,0.4);
+}
+
+.buy-button {
+	width:50%;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:1vw;
+	line-height:1vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	border-top-left-radius:0.3vw;
+	border-bottom-left-radius:0.3vw;
+	float:left;
+	
+}
+
+.buy-button:hover {
+	background:rgba(65,235,70,1);
+	box-shadow: 0 0 1.5vw rgba(65,235,70,0.8);
+}
+
+.sell-button {
+	width:50%;
+	height:2.8vw;
+	background:rgba(255,225,30,1);
+	background:rgba(0,0,0,0.2);
+	border:none;
+	font-size:1vw;
+	line-height:1vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	border-top-right-radius:0.3vw;
+	border-bottom-right-radius:0.3vw;
+	border-left:0.1vw solid rgba(15,15,15,0.2);
+	float:right;
+	
+}
+
+.sell-button:hover {
+	background:rgba(255,70,70,1);
+	box-shadow: 0 0 1.5vw rgba(255,70,70,0.4);
+}
+
+#place-order {
+	background:rgba(255,225,30,1);
+	font-size:1.8vw;
+	line-height:1.8vw;
+	padding:1.2vw 2vw;
+	letter-spacing:0.1vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(55,55,55,1);
+	border:none;
+	border-radius:0.4vw;
+	margin-top:1vw;
+}
+
+#place-order:hover {
+	transform:scale(1.05);
+	background:rgba(255,255,30,1);
+	box-shadow: 0 0 2.5vw rgba(255,255,30,1);
+}
+
+
+
+
+
+/* == OWNER PANEL == */
+
+
+#owner-panel-block {
+	position:absolute;
+	background:rgba(50,50,50,0.8);
+	padding:1vw;
+	width:14vw;
+	border:0.05vw solid rgba(255,255,255,0.05);
+	float:left;
+	right:-4vw;
+	top:0;
+}
+
+
+#owner-title {
+	font-size:1.2vw;
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,170,0,1);
+}
+
+#small-title {
+	font-size:0.8vw;
+	color:#fff;
+	float:left;
+	margin:0.5vw 0;
+}
+
+#small-title i {
+	color:#ffc82b;
+	text-shadow: 0 0 15px #ff5050;
+}
+
+.strain-input-small {
+	background:rgba(255,255,255,0.1);
+	color:rgba(255,255,255,1);
+	width:70%;
+	height:2vw;
+	font-size:0.9vw;
+	line-height:1vw;
+	padding:0 1vw;
+	text-align:center;
+	border:none;
+	outline:none;
+	vertical-align: top;
+	border-radius:0vw;
+}
+
+.owner-small-button-plus {
+	width:30%;
+	height:2vw;
+	background:rgba(105,255,55,0.5);
+	border:none;
+	font-size:0.6vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:rgba(255,255,255,1);
+	vertical-align: top;
+	float:right;
+}
+
+.owner-small-button-plus:hover {
+	background:rgba(65,235,70,1);
+	box-shadow: 0 0 1.5vw rgba(65,235,70,0.8);
+}
+
+#tanker-capacity {
+	font-size:0.8vw;
+	margin-top:10px;
+	
+}
+
+#tanker-capacity span {
+	font-size:1vw;
+	color:rgba(255,50,50,1);
+	text-shadow: 0 0 1vw rgba(255,50,50,1);
+}
+
+#refuel-station {
+	width:100%;
+	height:2vw;
+	background:#cd2e2e;
+	border:none;
+	font-size:0.8vw;
+	transition:0.2s;
+	cursor:pointer;
+	color:#fff;
+	vertical-align: top;
+	margin-top:0.5vw;
+	
+}
+
+#refuel-station:hover {
+	background:#fb2b2b;
+	box-shadow: 0 0 25px #b11e1e;
+	transform:scale(1.05);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background-color: none;
+		border: none;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 10px;
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background-color: #ce0c03;
+		border: 2px solid #ce0c03);
+	}
