@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <style>
+        /* Base Styles */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.4em;
+            color: #222;
+            background: #474747;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Grid */
+        
+        .section {
+            clear: both;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .col {
+            display: block;
+            float: left;
+            margin: 1% 0 1% 1.6%;
+        }
+        
+        .col:first-child {
+            margin-left: 0;
+        }
+        
+        .span_3_of_3 {
+            width: 100%;
+        }
+        
+        .span_2_of_3 {
+            width: 66.1%;
+        }
+        
+        .span_1_of_3 {
+            width: 32.2%;
+        }
+        /* Header & Navigation */
+        
+        header {
+            max-width: 100%;
+            background: url('header-bg.png') top center no-repeat, #222;
+            /*FallBack*/
+            /* background: rgba(0, 0, 0, .6); */
+            padding: 20px;
+        }
+        
+        nav {
+            width: 100%;
+            margin-bottom: 1em;
+            background: #323232;
+            font-family: 'Poiret One', cursive;
+        }
+        
+        .logo {
+            text-align: center;
+            color: #fff;
+            font-size: 3em;
+            font-weight: 400;
+            font-family: 'Poiret One', cursive;
+        }
+        
+        ul {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            -webkit-transition: max-height 0.5s;
+            transition: max-height 0.5s;
+        }
+        
+        .container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .blog-post {
+            background: #fff;
+            margin: 0 auto 2em auto;
+            padding: 35px 30px;
+            box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.3);
+        }
+        
+        .side-post {
+            background: #fff;
+            margin: 0 auto 1.5em auto;
+            width: 15em;
+            padding: 20px;
+        }
+        
+        .blog-content {
+            font-size: 1em;
+            border-left: 5px solid #ce0c03;
+            padding-left: 15px;
+        }
+        
+        .side-content {
+            font-size: .9em;
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+        
+        .blog-title {
+            font-size: 2.5em;
+            margin-top: 5px;
+        }
+        
+        .date {
+            font-size: 1em;
+            font-weight: 400;
+            color: #9C9C9C;
+            margin-top: -10px;
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+        }
+        
+        .post-link {
+            color: #009ACD;
+            font-style: italic;
+            transition: all 0.4s;
+        }
+        
+        .post-link:hover {
+            color: #005c7b;
+            text-decoration: underline;
+            text-decoration-color: currentColor;
+            cursor: pointer;
+        }
+        /* Button */
+        
+        .button {
+            display: block;
+            padding: 15px 20px;
+            margin-top: .8em;
+            background: #009ACD;
+            text-align: center;
+            color: #fff;
+            font-size: 1.4em;
+            border-radius: 3px;
+            transition: all .4s ease-in;
+        }
+        
+        .button:hover {
+            background: #005c7b;
+        }
+        /* Not Media Queries :D */
+        
+        .col {
+            margin: 1% 0 1% 0%;
+        }
+        
+        .span_3_of_3,
+        .span_2_of_3,
+        .span_1_of_3 {
+            width: 100%;
+        }
+        
+        .side-post {
+            width: 42%;
+            float: left;
+            margin: -2% 0 1% 1.6%;
+        }
+        
+        .not-logo {
+            height: 76px;
+            width: 76px;
+            min-height: 76px;
+            min-height: 76px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        header {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        /* header:after {
+      content: "";
+      width: 0;
+      display: "block";
+      position: absolute;
+      top: -100px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 100px solid transparent;
+      border-bottom: 100px solid transparent;
+
+      border-right: 100px solid #ce0c03;
+    } */
+        
+         ::-webkit-scrollbar-track,
+         ::-webkit-scrollbar-track {
+            background-color: none;
+            border: none;
+        }
+        
+         ::-webkit-scrollbar,
+         ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #101010;
+        }
+        
+         ::-webkit-scrollbar-thumb,
+         ::-webkit-scrollbar-thumb {
+            background-color: #ce0c03;
+            border: 2px solid #ce0c03);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="not-logo"></div>
+        <!--       <h1 class="logo">Logo</h1>   -->
+
+    </header>
+    <!--     <nav>
+            <ul>
+                <li class="nav-item"><a href="#" >Home</a></li>
+                <li class="nav-item"><a href="#" >Blog</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#" >Contact</a></li>
+            </ul>
+              <div class="menu-bar">Menu
+                  <span class="hamburger-icon"><i class="fa fa-bars"></i></span>
+            </div>
+        </nav> -->
+
+    <div class="container">
+        <div class="section">
+            <div class="col span_2_of_3">
+                <div class="blog-post">
+                    <h1 class="blog-title">Οδηγίες Συναρμολόγησης Όπλων</h1>
+                    <!-- <h2 class="date">Posted 3rd Dec 2017</h2> -->
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα Πιστολάκι χρειάζεσαι τα παρακάτω:</b><br/> &bull; 8000 καθαρά χρήματα<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα GLOCK17 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 καθαρά χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia/Cartel Rank 1 και πάνω<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα P226 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 καθαρά χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia/Cartel Rank 1 και πάνω<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα Double Barrel Shotgun χρειάζεσαι τα παρακάτω:</b><br/> &bull; 23000 καθαρά χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia/Cartel Rank 1 και πάνω<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα KATANA χρειάζεσαι τα παρακάτω:</b><br/> &bull; 5000 καθαρά χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia/Cartel Rank 1 και πάνω<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MP40 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 2 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MP5SD χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 2 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα SCORPION χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 2 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull;
+                        x1 Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα M9 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 10000 καθαρά χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang 1 και πάνω<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα BIZON χρειάζεσαι τα παρακάτω:</b><br/> &bull; 15000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MCX χρειάζεσαι τα παρακάτω:</b><br/> &bull; 15000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG<br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα PKM χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα VSS χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα BTR χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MAC10 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 15000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα HK43 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 3 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα 45ACP χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG
+                        <br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MP7 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 17000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα AK102 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MP5A1 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα AKM χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα G36C χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα HK516 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα RPK χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 4 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα LVOAC χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα SUNDA χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MPX χρειάζεσαι τα παρακάτω:</b><br/> &bull; 20000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG<br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα TAR χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα SIG516 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα CBQ χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα M4A4 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα FAMAS χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα M203 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+
+                    <p class="blog-content">
+                        <br/>
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα ISY χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 5 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα AK47 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα ISY χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα AUG χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1 Κάνη
+                        AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα G36K χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα P90 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 25000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο SMG<br/> &bull; x1
+                        Κάνη SMG<br/> &bull; x1 Κλείστρο SMG<br/> &bull; x1 Κοντάκιο SMG<br/> &bull; x1 Ελατήριο SMG<br/> &bull; x1 Λαβή SMG<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα M4A5 χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR<br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα BARSKA χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα MALYUK χρειάζεσαι τα παρακάτω:</b><br/> &bull; 30000 μαύρα χρήματα<br/> &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 6 και πάνω<br/> &bull; x1 Στόχαστρο AR<br/> &bull; x1
+                        Κάνη AR
+                        <br/> &bull; x1 Κλείστρο AR<br/> &bull; x1 Κοντάκιο AR<br/> &bull; x1 Ελατήριο AR<br/> &bull; x1 Λαβή AR<br/>
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα FNFAL χρειάζεσαι τα παρακάτω:</b><br/> 
+                        &bull; 40000 μαύρα χρήματα<br/> 
+                        &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 7 και πάνω<br/> 
+                        &bull; x2 Ελατήριο AR<br/> 
+                        &bull; x2 Λαβή AR<br/> 
+                        &bull; x2 Κλείστρο AR<br/> 
+                        &bull; x2 Κοντάκιο AR<br/> 
+                        &bull; x2 Στόχαστρο AR<br/> 
+                        &bull; x2 Κάνη AR <br/> 
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα STG χρειάζεσαι τα παρακάτω:</b><br/> 
+                        &bull; 40000 μαύρα χρήματα<br/> 
+                        &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 7 και πάνω<br/> 
+                        &bull; x2 Ελατήριο AR<br/> 
+                        &bull; x2 Λαβή AR<br/> 
+                        &bull; x2 Κλείστρο AR<br/> 
+                        &bull; x2 Κοντάκιο AR<br/> 
+                        &bull; x2 Στόχαστρο AR<br/> 
+                        &bull; x2 Κάνη AR <br/> 
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα KILO433 χρειάζεσαι τα παρακάτω:</b><br/> 
+                        &bull; 42000 μαύρα χρήματα<br/> 
+                        &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 8 και πάνω<br/> 
+                        &bull; x2 Ελατήριο AR<br/> 
+                        &bull; x2 Λαβή AR<br/> 
+                        &bull; x2 Κλείστρο AR<br/> 
+                        &bull; x2 Κοντάκιο AR<br/> 
+                        &bull; x2 Στόχαστρο AR<br/> 
+                        &bull; x2 Κάνη AR <br/> 
+                    </p>
+                    <p class="blog-content">
+                        <b style="color:#ce0c03;"></b> <b>- Για να craftάρεις ένα T9ACC χρειάζεσαι τα παρακάτω:</b><br/> 
+                        &bull; 42000 μαύρα χρήματα<br/> 
+                        &bull; Τουλάχιστον ένα μέλος Gang/Mafia Rank 8 και πάνω<br/> 
+                        &bull; x2 Ελατήριο AR<br/> 
+                        &bull; x2 Λαβή AR<br/> 
+                        &bull; x2 Κλείστρο AR<br/> 
+                        &bull; x2 Κοντάκιο AR<br/> 
+                        &bull; x2 Στόχαστρο AR<br/> 
+                        &bull; x2 Κάνη AR <br/> 
+                    </p>
+
+                    <!--           <a href="#" class="post-link">Read More...</a> -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('.menu-bar').on('click', function() {
+                $('nav ul').toggleClass('reveal');
+            });
+        });
+    </script>
+</body>
+
+</html>

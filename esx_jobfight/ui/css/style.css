@@ -1,0 +1,68 @@
+html {
+	background:transparent;
+}
+
+body {
+	/* background:  url('https://i.imgur.com/WRpB6zr.png') bottom center no-repeat; */
+	background: transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+}
+
+#wrap {font-family:'Roboto';top: 0;left:0;width: 100%;height: 100%;position:absolute;color: rgba(255, 255, 255, 1);overflow:hidden;}
+
+/* -- EVENT TIMER -- */
+#event-timer-wrap {background:linear-gradient(180deg, rgba(50,50,50,1), transparent);border-top:2px solid rgba(255,255,255,1);position:absolute;top:0;left:0;right:0;margin:0 auto;width:10vw;height:4vw;box-sizing:border-box;display:flex;align-items:center;justify-content:center;}
+#event-timer-text {font-size:0.6vw;color:rgba(255,255,255,0.7);text-shadow: 0 0 1px rgba(0,0,0,1);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+#event-timer-text b {font-weight:bold;font-size:1.8vw;color:rgba(255,255,255,1);font-family:'DS-Digital';margin:-0.2vw 0 0 0;}
+
+
+/* -- EVENT COUNTDOWN -- */
+#event-countdown-wrap {background:linear-gradient(180deg, rgba(0,60,0,0.8), transparent);border-top:2px solid rgba(140,255,50,1);position:absolute;top:0;left:0;right:0;margin:0 auto;width:10vw;height:4vw;box-sizing:border-box;display:flex;align-items:center;justify-content:center;}
+#event-countdown-text {font-size:0.6vw;color:rgba(255,255,255,1);text-shadow: 0 0 1px rgba(0,0,0,1);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+#event-countdown-text b {font-weight:bold;font-size:2.4vw;color:rgba(150,255,50,1);text-shadow: 0 0 1px rgba(0,0,0,1),0 0 1vw rgba(50,255,50,0.5);font-family:'DS-Digital';margin:-0.25vw 0 0 0;}
+
+/* -- SCORE -- */
+#fight-score {position:absolute;top:0;left:0;right:0;width:100%;position:relative;height:4vw;margin:0 auto;display:flex;align-items:center;}
+#teammates-count, #opponents-count {background:radial-gradient(100% 100% at 50% 0%, rgba(0,100,255,0.5), transparent),rgba(20,20,20,0.6);color:rgba(50,210,255,1);text-shadow:0 0 1px black, 0 0 1vw rgba(50,100,255,1);width:5vw;height:70%;display:flex;align-items:center;justify-content:center;font-size:1.8vw;font-weight:bold;font-family:'DS-Digital';}
+#opponents-count {background:radial-gradient(100% 100% at 50% 0%, rgba(255,0,0,0.35), transparent),rgba(20,20,20,0.6);color:rgba(255,60,60,1);text-shadow:0 0 1px black, 0 0 1vw rgba(255,50,50,1);}
+#teammates-text, #opponents-text {background:radial-gradient(100% 100% at 50% 0%, rgba(255,255,255,0.1), transparent),rgba(10,10,10,0.6);color:rgba(50,210,255,1);font-size:0.7vw;text-shadow:0 0 1px black, 0 0 1vw rgba(50,100,255,1);padding:0 1vw;height:70%;display:flex;align-items:center;justify-content:center;}
+#opponents-text {color:rgba(255,60,60,1);text-shadow:0 0 1px black, 0 0 1vw rgba(255,50,50,1);}
+
+#teammates-count {position:absolute;top:0.5vw;right:55.5vw;}
+#opponents-count {position:absolute;top:0.5vw;left:55.5vw;}
+#teammates-text {position:absolute;top:0.5vw;right:60.5vw;}
+#opponents-text {position:absolute;top:0.5vw;left:60.5vw;}
+
+
+/* MAP SELECTION */
+.map-selection {background:url('../images/background.png') bottom center no-repeat, rgba(20,20,20,0.6);background-size:cover;width: 100%;height:100%;display: flex;position:absolute;top:0;left:0;}
+.map-selection-container {background:rgba(25,25,25,0.6);position:absolute;top:0;left:0;right:0;bottom:0;width:50vw;height:34vw;border:1px solid rgba(255,255,255,0.1);padding:0.5vw;border-radius:0.5vw;box-sizing:border-box;margin:auto;animation:zoomIn 0.5s 1;}
+.map-selection-header {background:radial-gradient(100% 100% at 50% 100%, rgba(255,255,255,0.05), transparent);width:100%;height:3vw;box-sizing:border-box;border-bottom:1px solid rgba(255,255,255,0.1);position:relative;color:rgba(255,255,255,0.8);padding:0.5vw 0 0 3.5vw;font-size:0.6vw;}
+.map-selection-header img {position:absolute;top:0.2vw;left:0.25vw;height:2.6vw;-webkit-user-drag:none;}
+.map-selection-header b {font-size:1vw;color:rgba(255,190,50,1);text-shadow:0 0 1vw rgba(255,80,50,1);}
+
+.maps-scrollable {width:100%;height:calc(100% - 3.5vw);overflow-y:scroll;margin:0.5vw 0 0 0;}
+.map-item {background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);box-sizing:border-box;width:calc(25% - 0.25vw);height:11.5vw;float:left;border-radius:0.25vw;padding:0.25vw;margin:0 0.25vw 0.25vw 0;}
+.map-item img {width:100%;height:7vw;object-fit:cover;-webkit-user-drag:none;filter:grayscale(0.2);opacity:0.5;transition:0.2s;}
+.map-item-name {background:radial-gradient(60% 100% at 50% 0%, rgba(255,255,255,0.1), rgba(255,255,255,0.02));width:100%;height:2vw;line-height:2vw;text-align:center;margin:0 0 0.2vw 0;box-sizing:border-box;padding:0 0 0 0.5vw;color:rgba(255,255,255,1);}
+.btn-select-map {background:rgba(215,130,40,0.1);color:rgba(255,210,50,1);width:100%;height:1.6vw;font-family:'Roboto';font-size:0.55vw;border:none;outline:none;transition:0.2s;cursor:pointer;}
+.btn-select-map:hover {background:rgba(215,130,40,0.5);color:rgba(255,255,255,1);}
+
+.map-item:hover, .map-item.selected:hover {border:1px solid rgba(255,120,50,0.6);}
+.map-item.selected {border:1px solid rgba(255,255,255,0.1);}
+
+.map-item:hover img, .map-item.selected img{filter:grayscale(0);opacity:1;}
+.map-item:hover .map-item-name, .map-item.selected .map-item-name{background:radial-gradient(60% 100% at 50% 0%, rgba(255,100,50,0.2), rgba(255,255,255,0.02));color:rgba(255,210,50,1);}
+
+.map-item.selected .btn-select-map {background:rgba(215,150,40,0.7);color:rgba(255,255,255,1);}
+
+
+
+
+::-webkit-scrollbar-track {background-color: none;border: none;}	
+::-webkit-scrollbar {width: 0.1vw;background-color: rgba(255,255,255,0.1);;}
+::-webkit-scrollbar-thumb {background-color: rgba(255,100,50,1);}
