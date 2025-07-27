@@ -1,0 +1,553 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+}
+
+body {
+	background:  transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+}
+
+
+
+
+
+
+/* -- BOTTOM LEFT WRAP -- */
+
+#bottom-left-wrap {
+	font-family:Bebas Nue;
+	font-size:1.2vw;
+	color: #fff;
+	position:absolute;
+    vertical-align: top;
+    transition: 0.2s;
+    bottom:12vw;
+    left: 0;
+    position: absolute;
+}
+
+#bottom-left-icon {
+	background:  url('../images/notify.png') left center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	width:4vw;
+	height:2vw;
+	float:left;
+	opacity:1;
+	float:left;
+}
+
+#bottom-left-title {
+	font-size:1vw;
+	line-height:1vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,1);
+	text-align:left;
+	margin-bottom:0.5vw;
+	float:left;
+}
+
+#bottom-left-title-small {
+	font-size:1vw;
+	line-height:2vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,0.7);
+	text-align:left;
+	margin-bottom:0.5vw;
+	float:left;
+}
+
+#bottom-left-title #highlight{
+	color:rgba(255,225,60,1);
+}
+
+/* Emergency Below */
+
+
+@keyframes strain-zoom {
+	0% {
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg) scale(0.4, 0.4);
+	}
+	100% {
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg) scale(1, 1);
+	}
+}
+	
+#wrap-ems {	
+	background:  url('../images/ems-background.png') center center no-repeat, rgba(40,40,40,0.75);
+	-webkit-background-size: cover;
+	font-family:Bebas Nue;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	perspective: 40vw;
+	perspective-origin: 50% 50%;
+}
+
+#wrap-police {	
+	background:  url('../images/police-background.png') center center no-repeat, rgba(40,40,40,0.75);
+	-webkit-background-size: cover;
+	font-family:Bebas Nue;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	perspective: 40vw;
+	perspective-origin: 50% 50%;
+}
+
+#wrap-taxi {	
+	background:  url('../images/taxi-background.png') center center no-repeat fixed, rgba(40,40,40,0.75);
+	-webkit-background-size: cover;
+	font-family:Bebas Nue;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	perspective: 40vw;
+	perspective-origin: 50% 50%;
+}
+
+#wrap-mechanic {	
+	background:  url('../images/mechanic-background.png') center center no-repeat fixed, rgba(40,40,40,0.75);
+	-webkit-background-size: cover;
+	font-family:Bebas Nue;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	perspective: 40vw;
+	perspective-origin: 50% 50%;
+}
+
+#wrap-firefighter {	
+	background:  url('../images/firefighter-background.png') center center no-repeat, rgba(40,40,40,0.45);
+	-webkit-background-size: cover;
+	font-family:Bebas Nue;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	color: rgba(255, 255, 255, 1);
+	perspective: 40vw;
+	perspective-origin: 50% 50%;
+}
+
+#ems-tablet{
+	background:url('../images/ems-tablet.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	top: 50%;
+	left:50%;
+	width: 50vw;
+	height: 30.1vw;
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	text-shadow: 0 0 0.8vw rgba(0,0,0,0.6);
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg);
+	filter:drop-shadow(-1vw 1vw 1vw rgba(0,0,0,0.5));
+	image-rendering:pixelated;
+	animation:strain-zoom 1.2s 1;
+}
+
+#police-tablet{
+	background:url('../images/police-tablet.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	top: 50%;
+	left:50%;
+	width: 50vw;
+	height: 30.1vw;
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	text-shadow: 0 0 0.8vw rgba(0,0,0,0.6);
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg);
+	filter:drop-shadow(-1vw 1vw 1vw rgba(0,0,0,0.5));
+	image-rendering:pixelated;
+	animation:strain-zoom 1.2s 1;
+}
+
+#taxi-tablet{
+	background:url('../images/taxi-tablet.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	top: 50%;
+	left:50%;
+	width: 50vw;
+	height: 30.1vw;
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	text-shadow: 0 0 0.8vw rgba(0,0,0,0.6);
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg);
+	filter:drop-shadow(-1vw 1vw 1vw rgba(0,0,0,0.5));
+	image-rendering:pixelated;
+	animation:strain-zoom 1.2s 1;
+}
+
+#firefighter-tablet{
+	background:url('../images/firefighter-tablet.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	top: 50%;
+	left:50%;
+	width: 50vw;
+	height: 30.1vw;
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	text-shadow: 0 0 0.8vw rgba(0,0,0,0.6);
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg);
+	filter:drop-shadow(-1vw 1vw 1vw rgba(0,0,0,0.5));
+	image-rendering:pixelated;
+	animation:strain-zoom 1.2s 1;
+}
+
+#mechanic-tablet{
+	background:url('../images/mechanic-tablet.png') top center no-repeat;
+	background-size:cover;
+	vertical-align: top;
+	top: 50%;
+	left:50%;
+	width: 50vw;
+	height: 30.1vw;
+	position:absolute;
+	color:#fff;
+	text-align:center;
+	transition:0.4s;
+	font-size:1vw;
+	text-shadow: 0 0 0.8vw rgba(0,0,0,0.6);
+	transform: translate(-50%, -50%) scaleX(0.90) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(5deg) rotateZ(-3deg);
+	filter:drop-shadow(-1vw 1vw 1vw rgba(0,0,0,0.5));
+	image-rendering:pixelated;
+	animation:strain-zoom 1.2s 1;
+}
+
+
+/* -- INSIDE TABLETS -- */
+
+table {
+	width:100%;
+	background:rgba(40,40,40,0.5);
+}
+
+table th {
+	background:rgba(60,60,60,0.5);
+	color:rgba(255,255,255,0.7);
+	font-weight:300;
+	font-size:1vw;
+	text-align:left;
+	padding:1vw;
+}
+
+table td {
+	color:rgba(255,255,255,1);
+	font-weight:300;
+	font-size:1vw;
+	text-align:left;
+	padding:0.5vw 1vw;
+	border-bottom:0.02vw solid rgba(255,255,255,0.1);
+}
+
+#ems-scrollable {
+	position:absolute;
+	margin-top:3.8vw;
+	padding:0vw 0vw 0vw 3.9vw;
+	width:46.1vw;
+	height:21.1vw;
+	overflow-y:scroll;
+}
+
+#police-scrollable {
+	position:absolute;
+	margin-top:3vw;
+	padding:0vw 0vw 0vw 4.3vw;
+	width:45.3vw;
+	height:24.2vw;
+	overflow-y:scroll;
+}
+
+
+#taxi-scrollable {
+	position:absolute;
+	margin-top:3vw;
+	padding:0vw 0vw 0vw 2.8vw;
+	width:47.3vw;
+	height:24.2vw;
+	overflow-y:scroll;
+}
+
+#mechanic-scrollable {
+	position:absolute;
+	margin-top:3.6vw;
+	padding:0vw 0vw 0vw 3.6vw;
+	width:46.5vw;
+	height:22.9vw;
+	overflow-y:scroll;
+}
+
+#firefighter-scrollable {
+	position:absolute;
+	margin-top:3.8vw;
+	padding:0vw 0vw 0vw 3.9vw;
+	width:46.1vw;
+	height:21.1vw;
+	overflow-y:scroll;
+}
+
+#ems-hotcall-name {
+	width:7vw;
+	font-size:1.1vw
+}
+
+#ems-hotcall-distance {
+	width:4vw;
+	font-size:1vw;
+	color:rgba(255,80,80,1);
+	text-shadow: 0 0 1vw rgba(255,50,50,1);
+}
+
+#ems-hotcall-comment {
+	width:10vw;
+	font-size:0.9vw
+}
+
+#ems-route {
+	background:rgba(255,50,50,1);
+	color:rgba(255,255,255,1);
+	padding:0 1vw;
+	height:2vw;
+	font-size:1vw;
+	border:none;
+	outline:none;
+	border-radius:0.1vw;
+	transition:0.3s;
+	letter-spacing:0.05vw;
+}
+
+#ems-route:hover {
+	transform:scale(1.05);
+	filter:brightness(1.25);
+	box-shadow: 0 0 1.5vw rgba(255,0,0,0.7);
+}
+
+
+#police-hotcall-name {
+	width:7vw;
+	font-size:1.1vw
+}
+
+#police-hotcall-distance {
+	width:4vw;
+	font-size:1vw;
+	color:rgba(80,180,255,1);
+	text-shadow: 0 0 1vw rgba(50,150,255,1);
+}
+
+#police-hotcall-comment {
+	width:10vw;
+	font-size:0.9vw
+}
+
+#police-route {
+	background:rgba(50,150,255,1);
+	color:rgba(255,255,255,1);
+	padding:0 1vw;
+	height:2vw;
+	font-size:1vw;
+	border:none;
+	outline:none;
+	border-radius:0.1vw;
+	transition:0.3s;
+	letter-spacing:0.05vw;
+}
+
+#police-route:hover {
+	transform:scale(1.05);
+	filter:brightness(1.25);
+	box-shadow: 0 0 1.5vw rgba(0,100,255,0.7);
+}
+
+#taxi-hotcall-name {
+	width:7vw;
+	font-size:1.1vw
+}
+
+#taxi-hotcall-distance {
+	width:4vw;
+	font-size:0.9vw;
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,210,50,1);
+}
+
+#taxi-hotcall-comment {
+	width:10vw;
+	font-size:0.9vw
+}
+
+#taxi-route {
+	background:rgba(255,210,40,1);
+	color:rgba(0,0,0,1);
+	padding:0 1vw;
+	height:2vw;
+	font-size:1vw;
+	border:none;
+	outline:none;
+	border-radius:0.1vw;
+	transition:0.3s;
+	letter-spacing:0.05vw;
+}
+
+#taxi-route:hover {
+	transform:scale(1.05);
+	filter:brightness(1.25);
+	box-shadow: 0 0 1.5vw rgba(255,80,0,0.7);
+}
+
+#firefighter-hotcall-name {
+	width:7vw;
+	font-size:1.1vw
+}
+
+#firefighter-hotcall-distance {
+	width:4vw;
+	font-size:0.9vw;
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,210,50,1);
+}
+
+#firefighter-hotcall-comment {
+	width:10vw;
+	font-size:0.9vw
+}
+
+#firefighter-route {
+	background:rgba(255,210,40,1);
+	color:rgba(0,0,0,1);
+	padding:0 1vw;
+	height:2vw;
+	font-size:1vw;
+	border:none;
+	outline:none;
+	border-radius:0.1vw;
+	transition:0.3s;
+	letter-spacing:0.05vw;
+}
+
+#firefighter-route:hover {
+	transform:scale(1.05);
+	filter:brightness(1.25);
+	box-shadow: 0 0 1.5vw rgba(255,80,0,0.7);
+}
+
+#mechanic-hotcall-name {
+	width:7vw;
+	font-size:1.1vw
+}
+
+#mechanic-hotcall-distance {
+	width:4vw;
+	font-size:0.9vw;
+	color:rgba(255,210,50,1);
+	text-shadow: 0 0 1vw rgba(255,210,50,1);
+}
+
+#mechanic-hotcall-comment {
+	width:10vw;
+	font-size:0.9vw
+}
+
+#mechanic-route {
+	background:rgba(255,210,40,1);
+	color:rgba(0,0,0,1);
+	padding:0 1vw;
+	height:2vw;
+	font-size:1vw;
+	border:none;
+	outline:none;
+	border-radius:0.1vw;
+	transition:0.3s;
+	letter-spacing:0.05vw;
+}
+
+#mechanic-route:hover {
+	transform:scale(1.05);
+	filter:brightness(1.25);
+	box-shadow: 0 0 1.5vw rgba(255,80,0,0.7);
+}
+
+
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+	background: rgba(200,200,200,0.1);
+	border: none;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+	width: 0.3vw;
+	background-color: transparent;
+	border-radius:0.4vw;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+	background: rgba(255,40,40,1);
+	border: 0.5vw solid rgba(255,40,40,1);
+	border-radius:0.5vw;
+}

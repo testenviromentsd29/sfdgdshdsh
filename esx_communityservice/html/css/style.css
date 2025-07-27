@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+
+html {
+	font-family:'Bebas Nue', 'Myriad Pro Cond';
+	background:transparent;
+}
+
+body {
+	background: transparent;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; 
+	z-index:9999;
+}
+
+/* -- MESSAGE WRAP -- */
+#message-wrap {
+	font-size:2.0vw;
+	color: #fff;
+	background: #c2c1be3d;
+	border-radius: 0.5vw 0.5vw;
+	border-spacing: 0.5vw 0.5vw;
+	position:absolute;
+    vertical-align: top;
+    transition: 0.2s;
+    bottom:4.5vw;
+    left: 23vw;
+    position: absolute;
+	font-family:'Bebas Nue', 'Myriad Pro Cond';
+}
+
+#message-text {
+	font-size:1.0vw;
+	line-height:1.4vw;
+	letter-spacing:0.05vw;
+	color:rgba(255,255,255,1);
+	text-shadow: 0 0 0.1vw rgba(0,0,0,0.8);
+	text-align:center;
+}
+
+#message-text span{
+	color:rgba(255,70,70,1);
+	font-weight:bold;
+	font-size:1.8vw;
+	filter: drop-shadow(0 0 0.5vw rgba(255,0,0,1));
+}

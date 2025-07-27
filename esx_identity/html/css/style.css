@@ -1,0 +1,156 @@
+body {
+	font-family: sans-serif;
+	overflow: hidden;
+	display:none;
+	color: #fff;
+}
+
+.dialog {
+	width: 360px;
+	height:500px;
+	position:absolute;
+	margin-left: auto;
+	margin-right: auto; 
+	top: 28%;
+	padding: 20px;
+	left:50%; /* à 50%/50% du parent référent */
+	transform: translate(-50%); /* décalage de 50% de sa propre taille */
+	background: url('../img/background.gif') top center no-repeat, #fff;
+	border:none;
+	margin-bottom:20px;
+	color: #000000;
+	border-radius:5px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.4);
+}
+
+input {
+	width: 100%;
+	padding: 11px;
+	text-align:left;
+	color: #fff;
+
+	border:1px solid transparent;
+	border-radius:4px;
+	margin-bottom:5px;
+	background:#f5f5f5;
+}
+
+input:focus {
+	outline:none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: black;
+	opacity: 1; /* Firefox */
+}
+
+.radio-toolbar input[type="radio"] {
+	opacity: 0;
+	position: absolute;
+	width: 36%;
+}
+
+.radio-toolbar label {
+	display: inline-block;
+	margin-top: 5px;
+    background-color: #2f2f2f;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+	font-size: 16px;
+	color: #ccc;
+	border-radius: 4px;
+	width: 135px;
+	cursor:pointer;
+	border: 1px solid #3b3b3b;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#ec2222;
+	border: 1px solid #ec2222;
+	color: #fff;
+	box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+	border: 1px solid #ffad43;
+	color: #000000;
+}
+
+.radio-toolbar label:hover {
+	background-color: #ec2222;
+	border: 1px solid #ec2222;
+	color: #fff;
+	box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}
+
+button {
+	display: block;
+	background: url('../img/button.gif') top center repeat-x;
+	border-radius:3px;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 50px;
+	line-height:25px;
+	text-decoration:none;
+	font-weight:500;
+	cursor:pointer;
+	border:none;
+	text-shadow:0px 0px 8px #5d0000;
+	transition: 0.3s;
+	
+}
+
+button:hover {
+	box-shadow: 0 0 20px rgba(255,0,0,0.7);
+	text-shadow:0px 0px 8px #5d0000;
+}
+
+button:focus, button:active {
+	 outline: none;
+}
+
+
+
+h1 {
+	display: block;
+	margin-top: 5px;
+	margin-right: 5px;
+	padding: 10px;
+	background-color: #506be6;
+	color: #000000;
+	width: 93%;
+	text-align: center;
+}
+
+.range-wrap {
+	position: relative;
+	margin: 0 auto 3rem;
+}
+
+.range {
+	width: 100%;
+}
+
+
+.bubble {
+	background: #ec2222;
+	color: #fff;
+	padding: 4px 12px;
+	position: absolute;
+	border-radius: 4px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bubble::after {
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: #ec2222;
+	color: black;
+	top: -1px;
+	left: 50%;
+}
