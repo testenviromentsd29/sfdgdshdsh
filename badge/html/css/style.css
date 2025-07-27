@@ -1,0 +1,733 @@
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Thin.ttf") format("truetype");
+	font-weight: 100;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Light.ttf") format("truetype");
+	font-weight: 200;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Middle.ttf") format("truetype");
+	font-weight: 300;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Italic.ttf") format("truetype");
+	font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Nue";
+    src: url("./fonts/BebasNeuePro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "SignPainter";
+    src: url("./fonts/SignPainter.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Myriad Pro'), url('https://fonts.cdnfonts.com/s/492/MYRIADPRO-COND.woff') format('woff');
+}
+
+html {
+	font-family:Bebas Nue;
+	background:transparent;
+	height: 100%;
+}
+
+body {
+    font-family: 'Bebas Nue', 'Myriad Pro Cond';
+    background: transparent;
+	/* background: url('https://i.imgur.com/xoMFic7.png') center center no-repeat fixed; */
+	background-size:cover;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index:9999;
+	overflow:hidden
+}
+
+
+#wrap {
+	display: block;
+	background:radial-gradient(circle at right, rgba(60,0,0,0) -20%, rgba(40,40,40,0) 50%);
+    position: absolute;
+	font-family: 'Bebas Nue', 'Myriad Pro Cond';
+	overflow: auto;
+	width: 100%;
+	height:100%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	color: rgba(0, 0, 0, 0.9);
+}
+
+
+#police-badge-en {
+	background: url('../images/police-en.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#police-badge-en .face {
+	width:5.2vw;
+	height:5.2vw;
+	position:absolute;
+	top:5.5vw;
+	left:0.8vw;
+	image-rendering:pixelated;
+}
+
+#police-badge-en .name {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:6.5vw;
+	top:5.5vw;
+}
+
+#police-badge-en .job {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:6.5vw;
+	top:7.5vw;
+}
+
+#police-badge {
+	background: url('../images/police.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#police-badge .face {
+	width:5.5vw;
+	height:5.5vw;
+	position:absolute;
+	bottom:1vw;
+	right:1vw;
+	image-rendering:pixelated;
+}
+
+#police-badge .name {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:1vw;
+	top:9vw;
+}
+
+#police-badge .job {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:3.8vw;
+	top:10.4vw;
+}
+
+#limeniko {
+	background: url('../images/limeniko.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#limeniko .face {
+	width:5.5vw;
+	height:5.5vw;
+	position:absolute;
+	top:4.5vw;
+	right:0.7vw;
+	image-rendering:pixelated;
+}
+
+#limeniko .name {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1.2vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:0.5vw;
+	top:4vw;
+}
+
+#limeniko .job {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:0.5vw;
+	top:6vw;
+}
+
+#kivernisi {
+	background: url('../images/kivernisi.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#kivernisi .face {
+	width:5.5vw;
+	height:5.5vw;
+	position:absolute;
+	top:4.5vw;
+	right:0.7vw;
+	image-rendering:pixelated;
+}
+
+#kivernisi .name {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1.2vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:0.5vw;
+	top:4vw;
+}
+
+#kivernisi .job {
+	position:absolute;
+	color:rgba(20,40,70,1);
+	font-size:1vw;
+	font-weight:bold;
+	letter-spacing:0.02vw;
+	left:0.5vw;
+	top:6vw;
+}
+
+#ambulance-badge-en {
+	background: url('../images/ambulance-en.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#ambulance-badge-en .face {
+	width:6vw;
+	height:6vw;
+	position:absolute;
+	bottom:0.5vw;
+	right:2.4vw;
+	image-rendering:pixelated;
+}
+
+#ambulance-badge-en .name {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1.2vw;
+	letter-spacing:0.02vw;
+	left:0.5vw;
+	top:9vw;
+}
+
+#ambulance-badge-en .job {
+	position:absolute;
+	color:rgba(255,255,255,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:0.6vw;
+	top:10.9vw;
+}
+
+#ambulance-badge {
+	background: url('../images/ambulance.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#ambulance-badge .face {
+	width:6vw;
+	height:6vw;
+	position:absolute;
+	top:4.5vw;
+	right:0.7vw;
+	image-rendering:pixelated;
+}
+
+#ambulance-badge .name {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1.2vw;
+	letter-spacing:0.02vw;
+	left:0.7vw;
+	top:10.2vw;
+}
+
+#ambulance-badge .job {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:0.8vw;
+	top:12vw;
+}
+
+#dikigoros-badge {
+	background: url('../images/dikigoros.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#dikigoros-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#dikigoros-badge .name {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1.2vw;
+	left:1.4vw;
+	top:6vw;
+}
+
+#dikigoros-badge .job {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1.5vw;
+	top:7.8vw;
+}
+
+#dikigoros-badge-en {
+	background: url('../images/dikigoros-en.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#dikigoros-badge-en .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#dikigoros-badge-en .name {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1.2vw;
+	left:1.4vw;
+	top:6vw;
+}
+
+#dikigoros-badge-en .job {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1.5vw;
+	top:7.8vw;
+}
+
+
+
+#avocat-badge {
+	background: url('../images/avocat.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#avocat-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#avocat-badge .name {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1.2vw;
+	left:1.4vw;
+	top:6vw;
+}
+
+#avocat-badge .job {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1.5vw;
+	top:7.8vw;
+}
+
+#avocat-badge-en {
+	background: url('../images/avocat-en.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#avocat-badge-en .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#avocat-badge-en .name {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1.2vw;
+	left:1.4vw;
+	top:6vw;
+}
+
+#avocat-badge-en .job {
+	position:absolute;
+	color:rgba(95,35,25,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1.5vw;
+	top:7.8vw;
+}
+
+#army2-badge {
+	background: url('../images/army.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#army2-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#army2-badge .name {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1.4vw;
+	left:1vw;
+	top:6vw;
+}
+
+#army2-badge .job {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1vw;
+	top:7.8vw;
+}
+#army-badge {
+	background: url('../images/army.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#army-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#army-badge .name {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1.4vw;
+	left:1vw;
+	top:6vw;
+}
+
+#army-badge .job {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1vw;
+	top:7.8vw;
+}
+#asfaleia-badge {
+	background: url('../images/asfaleia.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#asfaleia-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:3.8vw;
+	right:1.4vw;
+	image-rendering:pixelated;
+}
+
+#asfaleia-badge .name {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1.4vw;
+	left:1vw;
+	top:6vw;
+}
+
+#asfaleia-badge .job {
+	position:absolute;
+	color:rgba(15,25,15,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:1vw;
+	top:7.8vw;
+}
+
+#chsecurity-badge {
+	background: url('../images/cityhall.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#chsecurity-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:1vw;
+	right:1vw;
+	image-rendering:pixelated;
+}
+
+#chsecurity-badge .name {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1.2vw;
+	left:0.7vw;
+	top:7vw;
+}
+
+#chsecurity-badge .job {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:0.8vw;
+	top:8.8vw;
+}
+
+#cityhall-badge {
+	background: url('../images/cityhall.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+}
+
+#cityhall-badge .face {
+	width:5vw;
+	height:5vw;
+	position:absolute;
+	bottom:1vw;
+	right:1vw;
+	image-rendering:pixelated;
+}
+
+#cityhall-badge .name {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1.2vw;
+	left:0.7vw;
+	top:7vw;
+}
+
+#cityhall-badge .job {
+	position:absolute;
+	color:rgba(0,0,0,1);
+	font-size:1vw;
+	letter-spacing:0.02vw;
+	left:0.8vw;
+	top:8.8vw;
+}
+
+#cia-badge {
+	background: url('../images/cia.png') center center no-repeat fixed;
+	background-size:cover;
+	position:absolute;
+	width:22vw;
+	height:14vw;
+	top:50%;
+	right:2vw;
+	transform:translate(0%,-50%) scale(0.8);
+	border-radius:0.5vw;
+	box-shadow: 0 0 2vw rgba(0,0,0,0.8);
+	image-rendering:pixelated;
+}
+
+#cia-badge .face {
+	width:6.3vw;
+	height:6.3vw;
+	position:absolute;
+	top:3.2vw;
+	left:0.4vw;
+	image-rendering:pixelated;
+}
+
+#cia-badge .name {
+	position:absolute;
+	color:rgba(255,255,255,1);
+	font-size:1.2vw;
+	left:0.5vw;
+	top:10.8vw;
+}
+
+
+#cia-badge .job {
+	position:absolute;
+	color:rgba(255,240,120,1);
+	font-size:0.9vw;
+	letter-spacing:0.01vw;
+	left:0.5vw;
+	top:12.3vw;
+}
+
+
+
+
